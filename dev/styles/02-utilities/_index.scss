@@ -1,0 +1,26 @@
+//
+// Utilities
+//
+// Import the basic utilities that other components in your project will require and
+// that don’t change. For example, color palettes, global variables, mixins, etc.
+//
+$xl: 1399.98px;
+$lg: 1199.98px;
+$md: 991.98px;
+$sm: 767.98px;
+$xs: 575.98px;
+
+$color-text: #304659;
+$color-text2: #FFFFFF;
+$color-text3: #7B8086;
+$color-text4: #2A78B3;
+$color-text-hover: #A5EBFB;
+
+$font-main: 'Montserrat';
+$font-secondary: 'PlayfairDisplay';
+$gradient1: linear-gradient(100.84deg, #2A78B3 -3.18%, #45B9AF 112.02%);
+$gradient0: linear-gradient(100.84deg, #ffffff -3.18%, #ffffff 112.02%);
+$bg-black-05: rgba(0, 0, 0, 0.4);
+.fw-medium {
+	font-weight: 400;
+}

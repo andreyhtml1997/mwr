@@ -1,0 +1,66 @@
+.button {
+  padding: 13.5px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 13px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  text-transform: capitalize;
+  // transition: all 0.4s;
+  &__text {
+    display: block;
+  }
+  &--stroke {
+    background: transparent;
+    color: $color-text2;
+    border: 0.75px solid white;
+    &::after {
+      content: '';
+      position: relative;
+      background: url(../img/arrow-right-white.svg) center no-repeat;
+      width: 9px;
+      height: 8px;
+      margin-left: 6.5px;
+    
+    }
+    &:hover {
+      background: white;
+      &:after {
+        background-image: url(../img/arrow-right-blue.svg);
+      }
+      .button__text {
+        @extend .text-gradient;
+      }
+    }
+  }
+  &--border-gradient-transparent {
+    border-image-source: $gradient1 !important;
+    border: 0.75px solid;
+    border-image-slice: 1;
+    @extend .text-gradient;
+    &::after {
+      content: '';
+      position: relative;
+      background: url(../img/arrow-right-blue.svg) center no-repeat;
+      width: 9px;
+      height: 8px;
+      margin-left: 6.5px;
+    }
+    .button__text {
+      @extend .text-gradient;
+    }
+    &:hover {
+      background: $gradient1;
+      @extend .text-gradient-but-white;
+      &::after {
+        background-image: url(../img/arrow-right-white.svg);
+      }
+      .button__text {
+        @extend .text-gradient-but-white;
+      }
+    }
+  }
+}
