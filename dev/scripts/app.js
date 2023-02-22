@@ -1,20 +1,17 @@
 /*jslint browser, es6 */
 
+const preloader = document.querySelector('.preloader');
+
 const body = document.body;
 const html = document.documentElement;
-const preloader = document.querySelector('.preloader');
+const header = document.querySelector('.header');
 const headerBody = document.querySelector('.header__body');
+const toggleHeaderEls = document.querySelectorAll('.toggleHeader');
 
 const selectCountry = document.querySelectorAll('.selectCountry');
 const selectLanguage = document.querySelectorAll('.selectLanguage');
 
 let previousScrollPosition = 0;
-
-const set1VhInPx = () => {
-  let vh = window.innerHeight * 0.01;
-  html.style.setProperty('--vh', `${vh}px`);
-}
-set1VhInPx();
 
 const smoothAnchorScroll = function() {
   document.querySelectorAll('a.scrollto[href^="#"]').forEach(anchor => {
@@ -27,8 +24,17 @@ const smoothAnchorScroll = function() {
   });
 }
 
-body.classList.add('overflow-hidden');
-html.classList.add('overflow-hidden');
+const set1VhInPx = () => {
+  let vh = window.innerHeight * 0.01;
+  html.style.setProperty('--vh', `${vh}px`);
+}
+set1VhInPx();
+
+const Scrollbar = window.Scrollbar;
+Scrollbar.use(OverscrollPlugin);
+
+
+
 
 /**swiper function*/
 if(document.querySelector('.othersSay .swiper')) {
@@ -79,7 +85,6 @@ if(document.querySelector('.explore .swiper')) {
     }
   });
 }
-
 /**choices init*/
 function choicesAdditional(el, choices) {
   const dropdown = choices.dropdown.element
@@ -103,7 +108,7 @@ function choicesAdditional(el, choices) {
     wrapper.appendChild(el);
   }
   wrap(dropdownList, dropdownListWrapper);
-  const Scrollbar = window.Scrollbar;
+  
   Scrollbar.init(dropdownListWrapper, {
     thumbMinSize: 80,
     alwaysShowTracks: true
@@ -155,11 +160,14 @@ if(selectLanguage) {
 
 /**window events*/
 window.onload = function (e) {
-  preloader.classList.add('hidden');
-  html.classList.remove('overflow-hidden');
-  body.classList.remove('overflow-hidden');
+  header.classList.add('fixed');
+  setTimeout(()=>{
+    preloader.classList.add('hidden');
+    html.classList.remove('overflow-hidden');
+    body.classList.remove('overflow-hidden');
+
+  }, 1)
   /**header toggle init*/
-  const toggleHeaderEls = document.querySelectorAll('.toggleHeader');
   const toggleHeader = () => {
     toggleHeaderEls.forEach(el => el.classList.toggle('active'));
     headerBody.classList.toggle('active');
@@ -168,27 +176,25 @@ window.onload = function (e) {
   };
   toggleHeaderEls.forEach(el => el.addEventListener('click', toggleHeader));
 };
+
 window.onscroll = function(e) {
-  const header = document.querySelector('.header');
   if(header) {
     const offsetTop = e.currentTarget.pageYOffset;
     const scrollingDown = offsetTop > previousScrollPosition;
-    
     if(offsetTop > header.clientHeight/2) {
       if(scrollingDown) {
-        header.classList.add('fixed');
+        //header.classList.add('fixed');
       }
     } else if(offsetTop == 0) {
-      header.classList.remove('fixed');
+      //header.classList.remove('fixed');
     }
     previousScrollPosition = offsetTop;
   }
 }
+
 window.onresize = function(e) {
   set1VhInPx();
 }
-
-
 
 document.querySelector('#dynamicVideoModal').addEventListener('hide.bs.modal', function (e) {
   e.currentTarget.querySelector('video').pause();

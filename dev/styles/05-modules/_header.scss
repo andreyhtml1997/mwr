@@ -245,12 +245,13 @@
       }
       .dropdown-menu {
         border: none;
-        background: rgba(255, 255, 255, 0.15);
+        background: $bg-white-transparent;
         backdrop-filter: blur(10px);
         left: -15px !important;
-        top: 14px !important;
+        top: 17px !important;
         border-radius: 0px;
         backdrop-filter: blur(26px);
+        padding: 0;
         @media(max-width: $md) {
           position: static !important;
           transform: none !important;
@@ -263,11 +264,19 @@
         }
       }
       li {
-
+        
       }
       .dropdown-item {
         color: white;
         font-size: 14px;
+        display: flex;
+        align-items: center;
+        @media(min-width: $md){
+          
+          height: 40px;
+          font-size: 12px;
+          
+        }
         @media(max-width: $md) {
           font-weight: 500;
           padding: 0;
@@ -275,8 +284,7 @@
 
         }
         &:hover {
-          background-color: transparent;
-          color: $color-text-hover;
+          background-color: $bg-white-transparent;
         }
       }
     }
@@ -470,7 +478,7 @@
     //transform: translateY(0px);
 
     background: $bg-black-05;
-border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+//border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 &::before {
   position: absolute;
   left: 0;
@@ -626,7 +634,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     }
   }
   .nice-select-search {
-    background: rgba(255, 255, 255, 0.15) url(../img/icon-search-white.svg) 10px center no-repeat;
+    background: $bg-white-transparent url(../img/icon-search-white.svg) 10px center no-repeat;
     color: $color-text2;
     height: 38px;
     padding-left: 36px;
@@ -676,7 +684,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       }
     }
     &.focus, &:hover {
-      background-color: rgba(255, 255, 255, 0.15) !important;
+      background-color: $bg-white-transparent !important;
       @media(max-width: $sm) {
         background-color: transparent !important;
       }
@@ -803,7 +811,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 */
 
 .choices {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -873,9 +881,19 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       }
     }
     .scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.3);
+      background: transparent;
       @media(max-width: $sm){
         left: -4px;
+      }
+      &::before {
+        background: rgba(255, 255, 255, 0.3);
+        top: 0;
+        bottom: 3px;
+        left: 0;
+        right: 0;
+        content: '';
+        position: absolute;
+        border-radius: 10px;
       }
     }
     .fakeScroll__wrap {
@@ -974,8 +992,8 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       backdrop-filter: blur(30px);
       padding: 30px 30px 0px;
       border: none;
-      width: 283px;
-      margin-top: 11px;
+      width: 284px;
+      margin-top: 17px;
       overflow: hidden;
       @media(min-width: $sm) {
         padding: 12px 0px 0px 0px;
@@ -1039,7 +1057,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
             }
           }
           &.is-highlighted, &.is-selected, &:hover, &:focus {
-            background-color: rgba(255, 255, 255, 0.15) !important;
+            background-color: $bg-white-transparent !important;
             @media(max-width: $md) {
               
               background-color: transparent !important;
@@ -1050,13 +1068,14 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
           }
         }
         &__input {
-          background: rgba(255, 255, 255, 0.15) url(../img/icon-search-white.svg) 10px center no-repeat;
+          background: $bg-white-transparent url(../img/icon-search-white.svg) 10px center no-repeat;
           color: $color-text2;
           height: 38px;
           padding-left: 36px;
           border: none;
           margin: 0 auto;
           width: calc(100% - 60px);
+          font-size: 12px;
           @media(min-width: $sm) {
             margin-bottom: 14px;
             width: calc(100% - 24px);
@@ -1099,6 +1118,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   .choices__list--dropdown {
     display: flex;
     flex-direction: column;
+    border-radius: 0px;
     @media(max-width: $sm) {
       max-height: none;
     }
@@ -1115,6 +1135,10 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       display: block;
       line-height: 40px;
       margin-bottom: 6px;
+      font-size: 12px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -1277,6 +1301,8 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     }
     .choices__list--dropdown {
       @media(min-width: $sm) {
+        // height: calc(var(--vh, 1vh) * 100 - 236px);
+        min-height: 294px;
         max-height: 439px;
       }
       @media(max-width: $sm) {
@@ -1372,9 +1398,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       &__list {
         &--dropdown {
           @media(min-width: $sm) {
-            max-width: 160px;
-            padding-left: 0;
-            padding-right: 0;
+            
             .choices {
               &__item {
                 padding-left: 16px;
@@ -1384,7 +1408,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
                 &.is-selected {
                   padding-right: 30px;
                   &:after {
-                    right: 14px;
+                    //right: 14px;
                     
                   }
                   
@@ -1395,7 +1419,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
           @media(max-width: $sm) {
             .choices__item {
               &::after {
-                right: 0px !important;
+                //right: 0px !important;
               }
             }
           }
@@ -1422,7 +1446,12 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       @media(min-width: $sm) {
         padding-top: 0;
         padding-bottom: 0;
-        max-height: none;
+        max-width: 160px;
+        padding-left: 0;
+        padding-right: 0;
+        // height: calc(var(--vh, 1vh) * 100 - 236px);
+        min-height: 294px;
+        max-height: 400px;
       }
       @media(max-width: $sm) {
         padding-left: 0;

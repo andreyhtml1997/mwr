@@ -1,85 +1,105 @@
-<footer class="footer" id="footer">
-  <nav class="container">
-    <div class="footer__main">
-      <div class="footer__main-left">
-        <a href="index.html" class="footer__logo">
-          <img src="img/logo.svg" alt="logo">
-        </a>
-        <ul class="socials">
-          <li class="socials__el">
-            <a href="#" class="socials__link">
-              <span class="icon-social icon-social--inst"></span>
+<footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__main">
+          <a href="index.html" class="footer__logo">
+            <img data-src="img/logo.png" alt="logo" class="footer__logo-img lazy">
+          </a>
+          <nav class="socials">
+            <a href="#" class="socials__el">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.7045 7.72727C14.7045 3.80479 11.5248 0.625 7.60227 0.625C3.67979 0.625 0.5 3.80479 0.5 7.72727C0.5 11.2722 3.09719 14.2105 6.49254 14.7433V9.78028H4.68923V7.72727H6.49254V6.16255C6.49254 4.38255 7.55289 3.39933 9.17518 3.39933C9.95199 3.39933 10.765 3.53804 10.765 3.53804V5.28587H9.86945C8.98722 5.28587 8.712 5.83338 8.712 6.3956V7.72727H10.6818L10.3669 9.78028H8.712V14.7433C12.1074 14.2105 14.7045 11.2722 14.7045 7.72727Z" fill="#F7F8FB"/>
+                </svg>
+                
             </a>
-          </li>
-          <li class="socials__el">
-            <a href="#" class="socials__link">
-              <span class="icon-social icon-social--tw"></span>
+            <a href="#" class="socials__el">
+              <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.01243 1.90396C9.91007 1.90396 10.1348 1.91229 10.8811 1.94558C11.5747 1.9761 11.9492 2.09262 12.1989 2.18972C12.529 2.31734 12.7676 2.4727 13.0145 2.71962C13.2642 2.96931 13.4168 3.20512 13.5444 3.53527C13.6415 3.78496 13.7581 4.16226 13.7886 4.85307C13.8219 5.60214 13.8302 5.82686 13.8302 7.72173C13.8302 9.61936 13.8219 9.84408 13.7886 10.5904C13.7581 11.284 13.6415 11.6585 13.5444 11.9082C13.4168 12.2383 13.2615 12.4769 13.0145 12.7238C12.7648 12.9735 12.529 13.1261 12.1989 13.2537C11.9492 13.3508 11.5719 13.4674 10.8811 13.4979C10.132 13.5312 9.90729 13.5395 8.01243 13.5395C6.11479 13.5395 5.89007 13.5312 5.14378 13.4979C4.4502 13.4674 4.07566 13.3508 3.82597 13.2537C3.49583 13.1261 3.25724 12.9707 3.01032 12.7238C2.76063 12.4741 2.60804 12.2383 2.48042 11.9082C2.38332 11.6585 2.2668 11.2812 2.23628 10.5904C2.20299 9.84131 2.19467 9.61659 2.19467 7.72173C2.19467 5.82409 2.20299 5.59937 2.23628 4.85307C2.2668 4.15949 2.38332 3.78496 2.48042 3.53527C2.60804 3.20512 2.76341 2.96653 3.01032 2.71962C3.26001 2.46993 3.49583 2.31734 3.82597 2.18972C4.07566 2.09262 4.45297 1.9761 5.14378 1.94558C5.89007 1.91229 6.11479 1.90396 8.01243 1.90396ZM8.01243 0.625C6.08427 0.625 5.84291 0.633323 5.08552 0.666615C4.3309 0.699907 3.8121 0.821977 3.36266 0.99676C2.8938 1.17987 2.49707 1.42123 2.10312 1.81796C1.70639 2.21191 1.46502 2.60864 1.28192 3.07473C1.10713 3.52694 0.985063 4.04297 0.951771 4.79759C0.918479 5.55775 0.910156 5.79912 0.910156 7.72727C0.910156 9.65543 0.918479 9.8968 0.951771 10.6542C0.985063 11.4088 1.10713 11.9276 1.28192 12.377C1.46502 12.8459 1.70639 13.2426 2.10312 13.6366C2.49707 14.0305 2.8938 14.2747 3.35989 14.455C3.8121 14.6298 4.32813 14.7519 5.08274 14.7852C5.84013 14.8184 6.0815 14.8268 8.00966 14.8268C9.93781 14.8268 10.1792 14.8184 10.9366 14.7852C11.6912 14.7519 12.21 14.6298 12.6594 14.455C13.1255 14.2747 13.5222 14.0305 13.9162 13.6366C14.3101 13.2426 14.5543 12.8459 14.7346 12.3798C14.9094 11.9276 15.0315 11.4116 15.0648 10.657C15.0981 9.89957 15.1064 9.6582 15.1064 7.73005C15.1064 5.80189 15.0981 5.56053 15.0648 4.80313C15.0315 4.04852 14.9094 3.52972 14.7346 3.08028C14.5598 2.60864 14.3185 2.21191 13.9217 1.81796C13.5278 1.42401 13.1311 1.17987 12.665 0.999534C12.2128 0.824751 11.6967 0.702681 10.9421 0.669389C10.182 0.633323 9.94059 0.625 8.01243 0.625Z" fill="white"/>
+                <path d="M8.01347 4.0791C5.99931 4.0791 4.36523 5.71318 4.36523 7.72734C4.36523 9.7415 5.99931 11.3756 8.01347 11.3756C10.0276 11.3756 11.6617 9.7415 11.6617 7.72734C11.6617 5.71318 10.0276 4.0791 8.01347 4.0791ZM8.01347 10.0938C6.70677 10.0938 5.64697 9.03405 5.64697 7.72734C5.64697 6.42063 6.70677 5.36084 8.01347 5.36084C9.32018 5.36084 10.38 6.42063 10.38 7.72734C10.38 9.03405 9.32018 10.0938 8.01347 10.0938Z" fill="white"/>
+                <path d="M12.6566 3.93473C12.6566 4.40636 12.2737 4.78645 11.8048 4.78645C11.3332 4.78645 10.9531 4.40359 10.9531 3.93473C10.9531 3.46309 11.336 3.08301 11.8048 3.08301C12.2737 3.08301 12.6566 3.46587 12.6566 3.93473Z" fill="white"/>
+                </svg>
+                
             </a>
-          </li>
-          <li class="socials__el">
-            <a href="#" class="socials__link">
-              <span class="icon-social icon-social--tg"></span>
+            <a href="#" class="socials__el">
+              <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.3795 2.88636C14.3795 2.88636 14.2407 1.90703 13.8135 1.47701C13.2725 0.911044 12.6677 0.90827 12.3903 0.874978C10.4039 0.730713 7.42146 0.730713 7.42146 0.730713H7.41591C7.41591 0.730713 4.43351 0.730713 2.44709 0.874978C2.16966 0.90827 1.56485 0.911044 1.02386 1.47701C0.596613 1.90703 0.460671 2.88636 0.460671 2.88636C0.460671 2.88636 0.316406 4.03771 0.316406 5.18628V6.26272C0.316406 7.41129 0.457897 8.56263 0.457897 8.56263C0.457897 8.56263 0.596613 9.54197 1.02108 9.97199C1.56208 10.538 2.27231 10.5185 2.58858 10.5796C3.72605 10.6878 7.41868 10.7211 7.41868 10.7211C7.41868 10.7211 10.4039 10.7155 12.3903 10.574C12.6677 10.5407 13.2725 10.538 13.8135 9.97199C14.2407 9.54197 14.3795 8.56263 14.3795 8.56263C14.3795 8.56263 14.521 7.41406 14.521 6.26272V5.18628C14.521 4.03771 14.3795 2.88636 14.3795 2.88636ZM5.95106 7.56943V3.57717L9.78795 5.58023L5.95106 7.56943Z" fill="white"/>
+                </svg>
+                
             </a>
-          </li>
-          <li class="socials__el">
-            <a href="#" class="socials__link">
-              <span class="icon-social icon-social--linkedin"></span>
+            <a href="#" class="socials__el">
+              <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.19517 12.4979C10.5541 12.4979 13.486 8.05706 13.486 4.20712C13.486 4.08228 13.4832 3.95466 13.4776 3.82982C14.048 3.41735 14.5402 2.90646 14.9311 2.32114C14.3999 2.55747 13.836 2.71181 13.2585 2.7789C13.8665 2.41442 14.3218 1.84184 14.5399 1.1673C13.9679 1.5063 13.3423 1.74545 12.69 1.87447C12.2505 1.40747 11.6694 1.09825 11.0365 0.994641C10.4036 0.891028 9.75426 0.998784 9.18877 1.30125C8.62328 1.60372 8.17318 2.08404 7.90805 2.66797C7.64293 3.2519 7.57755 3.90691 7.72202 4.53172C6.56374 4.47359 5.4306 4.1727 4.39606 3.64855C3.36152 3.1244 2.44868 2.38869 1.71672 1.48912C1.3447 2.13053 1.23086 2.88952 1.39834 3.61185C1.56582 4.33418 2.00205 4.96564 2.61838 5.37789C2.15568 5.3632 1.70311 5.23862 1.29807 5.01445V5.05052C1.29766 5.72363 1.53036 6.37611 1.95662 6.89706C2.38288 7.418 2.9764 7.77525 3.63628 7.90807C3.20766 8.02535 2.7578 8.04243 2.32152 7.95801C2.50773 8.53689 2.87001 9.0432 3.35782 9.40627C3.84563 9.76934 4.43461 9.97105 5.04258 9.98327C4.01043 10.794 2.73543 11.2338 1.42292 11.2317C1.19016 11.2314 0.957623 11.2171 0.726562 11.189C2.05993 12.0444 3.61099 12.4987 5.19517 12.4979Z" fill="white"/>
+                </svg>
+                
             </a>
-          </li>
-          <li class="socials__el">
-            <a href="#" class="socials__link">
-              <span class="icon-social icon-social--discord"></span>
+            <a href="#" class="socials__el">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.2898 0.625H1.18541C0.60558 0.625 0.136719 1.08276 0.136719 1.64873V13.803C0.136719 14.369 0.60558 14.8295 1.18541 14.8295H13.2898C13.8696 14.8295 14.3413 14.369 14.3413 13.8058V1.64873C14.3413 1.08276 13.8696 0.625 13.2898 0.625ZM4.35092 12.7294H2.24243V5.94893H4.35092V12.7294ZM3.29668 5.02508C2.61974 5.02508 2.0732 4.47854 2.0732 3.80438C2.0732 3.13022 2.61974 2.58367 3.29668 2.58367C3.97084 2.58367 4.51738 3.13022 4.51738 3.80438C4.51738 4.47576 3.97084 5.02508 3.29668 5.02508ZM12.2411 12.7294H10.1354V9.43348C10.1354 8.64835 10.1215 7.63572 9.03953 7.63572C7.94367 7.63572 7.77721 8.49299 7.77721 9.378V12.7294H5.67427V5.94893H7.69398V6.87556H7.72173C8.00193 6.34289 8.68997 5.7797 9.71369 5.7797C11.8471 5.7797 12.2411 7.18351 12.2411 9.00901V12.7294V12.7294Z" fill="white"/>
+                </svg>
+                
             </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__main-right">
-        <ul class="footer__menu">
-          <li class="footer__menu-el">
-            <a href="index.html" class="footer__menu-link scrollto active">
-              Home
-            </a>
-          </li>
-          <li class="footer__menu-el">
-            <a href="research.html" class="footer__menu-link scrollto">
-              Research
-            </a>
-          </li>
-          <li class="footer__menu-el">
-            <a href="aboutUs.html" class="footer__menu-link scrollto">
-              About Us
-            </a>
-          </li>
-          <li class="footer__menu-el">
-            <a href="contactUs.html" class="footer__menu-link scrollto">
-              Contact
-            </a>
-          </li>
-        </ul>
-        <form action="#" class="form form--small">
-          <div class="email-container">
-            <input type="text" class="email" placeholder="Email address">
+          </nav>
+          <a href="#" class="footer__logo-partner">
+            <img data-src="img/etoa-logo.png" alt="etoa" class="footer__logo-partner-img lazy">
+          </a>
+        </div>
+        <div class="footer__secondary">
+          <div class="footer__block">
+            <h5 class="footer__block-title">Hong Kong</h5>
+            <div class="footer__block-content">
+              <a class="footer__block-content-el" href="https://goo.gl/maps/HRzye8pkM36ceexY9" target="_blank">Suite C, Level 7, World Trust Tower<br>
+                50 Stanley Street, Central</a>
+            </div>
           </div>
-          <button type="submit" class="button">Subscribe</button>
-        </form>
+          <div class="footer__block">
+            <h5 class="footer__block-title">United States</h5>
+            <div class="footer__block-content">
+              <a class="footer__block-content-el" href="https://goo.gl/maps/6ht8Wg5E82pcnmPdA" target="_blank">300 SE 2nd Street, Suite 600<br> Fort Lauderdale, FL 33301</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__secondary">
+          <div class="footer__block">
+            <h5 class="footer__block-title">France</h5>
+            <div class="footer__block-content">
+              <a class="footer__block-content-el" href="https://goo.gl/maps/Dn5HNXm29TZ4yDeF6" target="_blank">42 Avenue Montaigne <br>Paris, 75008</a>
+            </div>
+          </div>
+          <div class="footer__block">
+            <h5 class="footer__block-title">United Kingdom</h5>
+            <div class="footer__block-content">
+              <a class="footer__block-content-el" href="https://goo.gl/maps/B4Tgp6U3jcb4NVAK6" target="_blank">637 Oxford Road<br>
+                Reading, Berkshire, UK RG30 1HP</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__secondary">
+          <div class="footer__block">
+            <h5 class="footer__block-title">Contacts</h5>
+            <div class="footer__block-content">
+              <a class="footer__block-content-el" href="tel:(888) 516-2427">(888) 516-2427</a>
+              <a class="footer__block-content-el" href="mailto:support@mwrlife.com">support@mwrlife.com</a>
+              <a class="footer__block-content-el" href="tel:+1 954-361-8134">+1 954-361-8134</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <ul class="footer__bottom-menu">
+          <li class="footer__bottom-menu-el">
+            <a href="https://www.mwrlife.com/content/TermsofUse.pdf" class="footer__bottom-menu-link" target="_blank">Terms of Use</a>
+          </li>
+          <li class="footer__bottom-menu-el">
+            <a href="https://www.mwrlife.com/content/PrivacyPolicy.pdf" class="footer__bottom-menu-link" target="_blank">Privacy Policy</a>
+          </li>
+          <li class="footer__bottom-menu-el">
+            <a href="#" class="footer__bottom-menu-link" target="_blank">Cookie Settings</a>
+          </li>
+          <li class="footer__bottom-menu-el">
+            <a href="https://www.mwrlife.com/content/IncomeDisclosure.pdf" class="footer__bottom-menu-link" target="_blank">Income Disclosure</a>
+          </li>
+        </ul>
+        <div class="copyright">©2013-2023 MWR Life. All rights reserved.</div>
       </div>
     </div>
-    <div class="footer__footer">
-      <p class="copyright">2022 All rights reserved.</p>
-      <ul class="footer__footer-menu">
-        <li class="footer__footer-menu-el">
-          <a href="#" class="footer__footer-menu-link">Subscription Terms</a>
-        </li>
-        <li class="footer__footer-menu-el">
-          <a href="#" class="footer__footer-menu-link">Copyright Notice</a>
-        </li>
-        <li class="footer__footer-menu-el">
-          <a href="#" class="footer__footer-menu-link">Terms of Use</a>
-        </li>
-        <li class="footer__footer-menu-el">
-          <a href="#" class="footer__footer-menu-link">Legal & Privacy</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</footer>
+  </footer>
