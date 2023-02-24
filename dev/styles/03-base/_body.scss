@@ -56,15 +56,20 @@ img {
   height: auto;
 }
 
-html, body {
+html {
   background: $color-text2;
   font-family: $font-main;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   max-width: 100vw;
   overflow-x: hidden;
 }
-
+body {
+  background: $color-text2;
+  font-family: $font-main;
+  font-weight: 400;
+  line-height: 1.5;
+}
 .section-title {
   font-size: 32px;
   text-align: center;
@@ -110,7 +115,18 @@ html, body {
 }
 
 .section {
+  padding-top: 60px;
+  padding-bottom: 60px;
   position: relative;
+  @media(max-width: $md) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+.section-header {
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container {
 
@@ -161,6 +177,7 @@ html, body {
     font-size: 36px;
     @media(max-width: $sm) {
       font-size: 32px;
+      line-height: 34px;
     }
     @media(max-width: $xs) {
   
@@ -171,12 +188,13 @@ html, body {
     margin: 0 auto 25px;
     width: calc(100% + 20px);
     position: relative;
-    left: -10px;
+    
     @media(max-width: $sm) {
       font-weight: 300 !important;
     }
     @media(max-width: $xs) {
-  
+      width: calc(100% + 20px);
+      left: -10px;
     }
 
   }
@@ -459,6 +477,7 @@ html, body {
   align-items: center;
   justify-content: center;
   padding-top: 47px;
+  padding-bottom: 0;
   @media(max-width: $md) {
     align-items: flex-start;
     min-height: 392px;
@@ -596,8 +615,8 @@ html, body {
   padding-top: 66px;
   padding-bottom: 73px;
   @media(max-width: $md) {
-    padding-top: 49px;
-    padding-bottom: 43px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   @media(max-width: $sm) {
 
@@ -629,6 +648,8 @@ html, body {
     }
     @media(max-width: $sm) {
       row-gap: 24px;
+      margin-left: -10px;
+      margin-right: -10px;
     }
     @media(max-width: $xs) {
   
@@ -676,7 +697,6 @@ html, body {
     bottom: -1px;
     left: 0;
     right: 0;
-    height: 42px;
     text-align: center;
     font-weight: 500;
     color: $color-text2;
@@ -686,9 +706,15 @@ html, body {
     justify-content: center;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(11.7188px);
+    min-height: 42px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    line-height: 1.2;
     @media(max-width: $md) {
-      height: 38px;
+      min-height: 38px;
       font-size: 13px;
+      padding-bottom: 10px;
+      padding-top: 10px;
     }
     @media(max-width: $sm) {
 
@@ -700,6 +726,8 @@ html, body {
 }
 
 .eliteCard {
+  padding-top: 0;
+  padding-bottom: 0;
   @media(max-width: $md) {
 
   }
@@ -1150,6 +1178,7 @@ html, body {
     display: flex;
     align-items: center;
     min-width: 40px;
+    cursor: pointer;
     @media(max-width: $md) {
 
     }
@@ -1158,10 +1187,34 @@ html, body {
     }
     @media(max-width: $xs) {
   
+    }
+    &:hover {
+      background: $color-text2;
+      color: $color-text;
+      .othersSay__el-likes-value {
+        color: $color-text;
+      }
+      svg {
+        path {
+          stroke: $color-text;
+          fill: transparent;
+        }
+      }
+    }
+    &--like {
+      &:hover {
+        svg {
+          path {
+            stroke: $color-text;
+            fill: $color-text;
+          }
+        }
+      }
     }
   }
   &__el-likes-img {
     margin-right: 3px;
+    position: relative;
     @media(max-width: $md) {
 
     }
@@ -1170,6 +1223,9 @@ html, body {
     }
     @media(max-width: $xs) {
   
+    }
+    &--like {
+      top: -1px;
     }
   }
   &__el-likes-value {
@@ -1692,14 +1748,12 @@ html, body {
   }
   &__body {
     max-width: 643px;
-    min-height: 317px;
     padding: 27px 32px;
     color: $color-text2;
     background: rgba(0, 0, 0, 0.07);
     backdrop-filter: blur(23.4375px);
     @media(max-width: $md) {
       max-width: 518px;
-      min-height: 324px;
       padding: 24px 31px;
     }
     @media(max-width: $sm) {
@@ -1785,7 +1839,7 @@ html, body {
     color: $color-text2;
     @media(max-width: $md) {
       font-size: 24px;
-      line-height: 31px;
+      line-height: 34px;
       margin-bottom: 10px;
     }
     @media(max-width: $sm) {

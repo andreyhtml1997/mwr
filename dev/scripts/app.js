@@ -44,8 +44,8 @@ if(document.querySelector('.othersSay .swiper')) {
     loop: true,
     slidesPerView: 4,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".othersSay .swiper-button-next",
+      prevEl: ".othersSay .swiper-button-prev",
     },
     breakpoints: {
       0: {
@@ -66,6 +66,17 @@ if(document.querySelector('.othersSay .swiper')) {
         spaceBetween: 15.21,
       }
     }
+  });
+}
+/**swiper function*/
+if(document.querySelector('.comments .swiper')) {
+  const commentsSwiper = new Swiper(".comments .swiper", {
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+      nextEl: ".comments .swiper-pagination__el--prev",
+      prevEl: ".comments .swiper-pagination__el--next",
+    },
   });
 }
 /**swiper function*/
@@ -195,7 +206,8 @@ window.onscroll = function(e) {
 window.onresize = function(e) {
   set1VhInPx();
 }
-
-document.querySelector('#dynamicVideoModal').addEventListener('hide.bs.modal', function (e) {
-  e.currentTarget.querySelector('video').pause();
+document.querySelectorAll('.modal').forEach(el => {
+  el.addEventListener('hide.bs.modal', function (e) {
+    e.currentTarget.querySelector('video').pause();
+  })
 })
