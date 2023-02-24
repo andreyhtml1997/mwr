@@ -2,6 +2,8 @@
   .hero {
     background: url(../../img/company/heroBG.jpg) center no-repeat;
     background-size: cover;
+    height: calc(100vh - 310px);
+    height: calc(var(--vh, 1vh) * 100 - 310px);
     @media(max-width: $xl){
     
     }
@@ -24,6 +26,8 @@
     .section-text {
       @media(max-width: $xs) {
         max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
     .container {
@@ -133,6 +137,7 @@
   }
   &__text {
     color: #646E76;
+    font-size: 14px;
   }
   &__video {
     position: relative;

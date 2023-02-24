@@ -17,6 +17,8 @@
 }
 .check-blue-before {
   position: relative;
+  padding-left: 28px;
+  margin-bottom: 9px;
   &::before {
     content: '';
     position: absolute;
@@ -25,7 +27,14 @@
     width: 20.5px;
     height: 20.5px;
     background: url(../img/check-blue.svg) center no-repeat;
-    background-size: contain;
+    background-size: contain !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: $color-text4;
   }
 }
 @media (min-width: 768px) {
@@ -199,9 +208,9 @@ body {
   .section-text {
     max-width: 476px;
     margin: 0 auto 25px;
-    width: calc(100% + 20px);
+    //width: calc(100% + 20px);
     position: relative;
-    
+    //margin-left: -10px;
     @media(max-width: $sm) {
       font-weight: 300 !important;
     }
@@ -775,9 +784,7 @@ body {
   }
   &__body {
     padding-bottom: 11px;
-    -webkit-box-shadow: 0px 19px 42px 0px rgba(0,0,0,0.19);
-    -moz-box-shadow: 0px 19px 42px 0px rgba(0,0,0,0.19);
-    box-shadow: 0px 19px 42px 0px rgba(0,0,0,0.19);
+    box-shadow: $box-shadow-1;
     @media(max-width: $md) {
       padding-bottom: 34px;
     }
@@ -2000,6 +2007,7 @@ body {
     margin-bottom: 21px;
     max-width: 120px;
     width: 100%;
+    pointer-events: none;
     @media(max-width: $md) {
       max-width: 104px;
     }
@@ -2056,6 +2064,7 @@ body {
     color: $color-text4;
     margin-bottom: 16px;
     @extend .text-gradient;
+    pointer-events: none;
     @media(max-width: $md) {
 
     }

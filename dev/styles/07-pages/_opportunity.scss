@@ -1,7 +1,37 @@
 .opportunity-page {
   .hero {
+    background: url(../../img/opportunity/heroBG.jpg) center no-repeat;
+    background-size: cover;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+      height: calc(100vh - 250px);
+      height: calc(var(--vh, 1vh) * 100 - 250px);
+    }
+    @media(max-width: $md){
+      height: calc(100vh - 185px);
+      height: calc(var(--vh, 1vh) * 100 - 185px);
+    }
+    @media(max-width: $sm){
+      height: calc(100vh - 220px);
+      height: calc(var(--vh, 1vh) * 100 - 220px);
+      
+    }
+    @media(max-width: $xs){
+    }
+    
     .section-text {
-
+      @media(max-width: $xs){
+        max-width: 230px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  .travel__el {
+    @media(max-width: $xs){
+      height: 290px;
     }
   }
 }
@@ -10,12 +40,38 @@
   .container {
   }
   .row {
+
   }
   .col-lg-6 {
+    
   }
   .section-title {
+    @media(min-width: $md){
+      text-align: left;
+    }
   }
   .button {
+    max-width: 125px;
+    width: 100%;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 41px;
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
     &--gradiet-to-border-transparent {
     }
     &__bg {
@@ -30,29 +86,158 @@
   .lazy {
   }
   &__list {
+    font-size: 15px;
+    counter-reset: a;
+    padding-bottom: 20px;
+    @media(max-width: $md){
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media(max-width: $md) and (min-width: $sm){
+      display: flex;
+      justify-content: space-between;
+      max-width: 550px;
+     
+    }
+    
   }
   &__list-el {
+    @extend .check-blue-before;
+    text-transform: capitalize;
+    margin-bottom: 11px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+    
+    }
+    @media(max-width: $sm){
+      margin-bottom: 8px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    &::before {
+      top: 1px;
+      background-image: url(../../img/icon-circle-gradient.svg);
+      counter-increment: a;
+      content: counter(a);
+      height: 19px;
+    }
   }
   &__blockquote {
+    border: 0.742361px solid #D6DADE;
+    padding: 30px;
+    margin-bottom: 35px;
+    background: url(../../img/opportunity/quotes.svg) 17px 13px no-repeat;
+    max-width: 400px;
+    @media(max-width: $md){
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 25px;
+      
+    }
   }
   &__blockquote-text {
+    color: #6F7077;
+    font-size: 13px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    @media(max-width: $sm){
+      font-size: 14px;
+    }
   }
   &__blockquote-author {
+    @extend .text-gradient;
+    font-weight: 600;
+    font-size: 15px;
+    @media(max-width: $sm){
+      font-size: 14px;
+    }
   }
   &__images {
+    height: 100%;
+    @media(min-width: $md){
+      max-width: 440px;
+      margin-right: 0;
+      margin-left: auto;
+      
+    }
+    @media(max-width: $md){
+      max-height: 370px;
+    }
+    @media(max-width: $xs){
+      height: 269px;
+    }
+    .row {
+      margin-left: -7px;
+      margin-right: -7px;
+      height: 100%;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+      
+      }
+      @media(max-width: $sm){
+        
+      }
+      @media(max-width: $xs){
+        //flex-direction: row-reverse;
+      }
+      
+      & > * {
+        padding-right: 7px;
+        padding-left: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+          
+        }
+        @media(max-width: $sm){
+        
+        }
+        @media(max-width: $xs){
+          
+        }
+        &:nth-of-type(2) {
+          //flex-direction: column-reverse;
+        }
+      }
+    }
   }
   &__image {
+    width: 100%;
+    object-fit: cover;
     &--1 {
+      height: calc(40% - 14px);
     }
     &--2 {
+      height: 60%;
     }
     &--3 {
+      height: 100%;
     }
   }
-  
 }
 
 .itWorks {
+  background:  #F9FAFB;
   .container {
   }
   .section-header {
@@ -64,6 +249,25 @@
   .lazy {
   }
   .section-text {
+    margin-bottom: 25px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+    @media(max-width: $sm){
+      font-size: 14px;
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   .button {
     &--border-transparent-to-gradient {
@@ -71,46 +275,459 @@
     &__text {
     }
   }
+  &__els {
+    padding-top: 10px;
+  }
   &__el {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 50px;
+    
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      flex-direction: column-reverse;
+      padding-left: 43px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    & > * {
+      width: calc(50% - 50px);
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        width: calc(50% - 35px);
+      }
+      @media(max-width: $sm){
+        width: 100%;
+      }
+      @media(max-width: $xs){
+      
+      }
+      
+    }
+    &:nth-of-type(odd) {
+      
+    }
+    &:nth-of-type(even) {
+      @media(min-width: $md){
+        flex-direction: row-reverse;
+      }
+    }
+    &:last-of-type {
+      padding-bottom: 0;
+      margin-bottom: 67px;
+      @media(max-width: $sm){
+        margin-bottom: 0;
+      }
+    }
+    .section-title {
+      text-align: left;
+      position: relative;
+      top: -9px;
+      line-height: 1;
+      @media(max-width: $md){
+        font-size: 20px;
+        top: 0;
+        margin-bottom: 9px;
+      }
+      @media(max-width: $sm) {
+        font-size: 24px;
+      }
+    }
+    &-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 1.5px;
+      background-color: #EAECF0;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+      
+      }
+      @media(max-width: $sm){
+        right: auto;
+        left: 12px;
+      }
+      @media(max-width: $xs){
+      
+      }
+      
+    }
+    &-dot {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: auto;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+      
+      }
+      @media(max-width: $sm){
+        right: auto;
+        width: 25px;
+      }
+      @media(max-width: $xs){
+      
+      }
+      
+      &::before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: $gradient1;
+        width: 18px;
+        height: 18px;
+        border-radius: 100px;
+        top: -3px;
+        content: '';
+        border: 3px solid #F9FAFB;
+        box-sizing: content-box;
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+        
+        }
+        @media(max-width: $sm){
+          border-color: #F5FBFF;
+        }
+        @media(max-width: $xs){
+        
+        }
+        
+      }
+      &::after {
+        width: 6px;
+        height: 6px;
+        border-radius: 100px;
+        content: 0;
+        top: 6px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        background: $color-text2;
+        position: absolute;
+        content: '';
+      }
+    }
+    &:nth-of-type(1) {
+      .itWorks__el-imgContainer {
+        background-image: url(../../img/opportunity/photo2-1.jpg);
+      }
+      .itWorks__el-img {
+        @media(min-width: $md){
+          height: 140%;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      .itWorks__el-imgContainer {
+        background-image: url(../../img/opportunity/photo2-2.jpg);
+      }
+    }
+    &:nth-of-type(3) {
+      .itWorks__el-imgContainer {
+        background-image: url(../../img/opportunity/photo2-3.jpg);
+      }
+      .itWorks__el-line {
+        display: none;
+      }
+    }
   }
   &__el-imgContainer {
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background: none !important;
+    position: relative;
+    overflow: hidden;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+    
+    }
+    @media(max-width: $sm){
+      height: 250px;
+      
+    }
+    @media(max-width: $xs){
+      height: 173px;
+    }
   }
   &__el-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+    
+    }
+    @media(max-width: $sm){
+      
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &__el-content {
+    position: relative;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+    }
+    @media(max-width: $sm){
+      margin-bottom: 28px;
+      
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &__el-list-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 9px;
+    text-transform: capitalize;
+    @media(max-width: $md){
+      font-size: 14px;
+    }
+    @media(max-width: $sm){
+      font-size: 16px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
   }
   &__el-list {
+    font-size: 14px;
+    @media(max-width: $md){
+      font-size: 13px;
+    }
+    @media(max-width: $sm){
+      font-size: 14px;
+    }
+    &--special {
+      @media(min-width: $md){
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .itWorks__el-list-el {
+        @media(min-width: $md){
+          &:nth-of-type(odd) {
+            width: 45%;
+          }
+          &:nth-of-type(even) {
+            width: 55%;
+          }
+          &:last-of-type {
+            width: 100%
+          }
+        }
+      }
+    }
   }
   &__el-list-el {
+    @extend .check-blue-before;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+      line-height: 1.2;
+      
+    }
+    @media(max-width: $md) and (min-width: $sm) {
+      padding-left: 20px;
+      &:before {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    @media(max-width: $sm){
+      &:before {
+        top: -2px;
+      }
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
   &__button {
+    position: absolute;
+    top: calc(100% + 27px);
+    @media(max-width: $sm){
+      position: static;
+      max-width: 125px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
   }
 }
 
-.section {
-}
 .live {
-  .container {
-  }
-  .section-title {
-  }
-  .section-text {
-  }
-  .button {
-    &--stroke {
-    }
-    &__text {
-    }
-  }
-  .planButton {
-  }
   &--join {
+    background: url(../../img/opportunity/joinBG.jpg) center top -18vw no-repeat;
+    background-size: cover;
+    min-height: 390px;
+    @media(max-width: $xl){
+      background-position: center bottom;
+      background-size: 1370px;
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+    }
+    @media(max-width: $sm){
+      background-position: right -350px bottom;
+      
+    }
+    @media(max-width: $xs){
+      padding-top: 32px;
+      padding-bottom: 312px;
+      text-align: center;
+      background-position: right -350px bottom -20px;
+    }
+    
+    .container {
+    }
+    .section-title {
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+      
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+        text-align: center;
+      }
+      
+    }
+    .section-text {
+    }
+    .button {
+      &--stroke {
+      }
+      &__text {
+      }
+    }
+    .planButton {
+      border: none;
+      max-width: none;
+      pointer-events: none;
+    }
+    .live {
+      &__body {
+        max-width: 428px;
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+          max-width: 380px;
+        }
+        @media(max-width: $sm){
+        
+        }
+        @media(max-width: $xs){
+          max-width: 100%;
+          padding: 30px 20px 20px;
+
+        }
+        
+      }
+      &__buttons {
+        display: flex;
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+        
+        }
+        @media(max-width: $sm){
+        
+        }
+        @media(max-width: $xs){
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+        }
+        
+      }
+    }
   }
-  &__body {
-  }
-  &__buttons {
-  }
+  
 }
 

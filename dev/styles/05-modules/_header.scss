@@ -58,7 +58,7 @@
     flex-shrink: 0;
     @media(min-width: $sm) {
       margin-right: 28px;
-      top: 3px;
+      //top: 3px;
     }
     @media(max-width: $md) {
 
@@ -470,6 +470,22 @@
 
     }
   }
+
+  .dropdown-menu {
+    @media(min-width: $sm){
+      background: $bg-black-05 !important;
+    }
+  }
+  .nice-select-dropdown {
+    @media(min-width: $sm){
+      background: $bg-black-05 !important;
+    }
+  }
+  .choices__list--dropdown {
+    @media(min-width: $sm){
+      background: $bg-black-05 !important;
+    }
+  }
   &.fixed {
     position: fixed;
     left: 0;
@@ -479,36 +495,36 @@
     //transform: translateY(0px);
 
     background: $bg-black-05;
-//border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-&::before {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  backdrop-filter: blur(26px);
-  content: '';
-  
-}
-.dropdown-menu {
-  @media(min-width: $sm){
-    background: $bg-black-05;
-  }
-}
-.nice-select-dropdown {
-  @media(min-width: $sm){
-    background: $bg-black-05;
-  }
-}
-.choices__list--dropdown {
-  @media(min-width: $sm){
-    background: $bg-black-05;
-  }
-}
+    //border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    &::before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      backdrop-filter: blur(26px);
+      content: '';
+      
+    }
+    .dropdown-menu {
+      @media(min-width: $sm) {
+        //background: $bg-black-05;
+      }
+    }
+    .nice-select-dropdown {
+      @media(min-width: $sm) {
+        //background: $bg-black-05;
+      }
+    }
+    .choices__list--dropdown {
+      @media(min-width: $sm) {
+        //background: $bg-black-05;
+      }
+    }
 
-&:after {
-  display: none;
-}
+    &:after {
+      display: none;
+    }
   }
   select {
     display: none;
@@ -847,8 +863,14 @@
   }
   .choices__list--dropdown {
     display: flex !important;
+    @media(max-width: $md) {
+      transition: transform 0.4s ease;
+      visibility: visible;
+      transform: translateX(-100%);
+    }
   }
   &.is-open {
+    
     .choices__inner {
       .choices__item {
         color: $color-text-hover;
@@ -856,6 +878,9 @@
     }
     .choices__list--dropdown {
       display: flex !important;
+      @media(max-width: $md) {
+        transform: translateX(0%);
+      }
     }
   }
   .choicesListWrapper {

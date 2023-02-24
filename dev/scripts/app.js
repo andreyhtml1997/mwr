@@ -171,7 +171,7 @@ if(selectLanguage) {
 
 /**window events*/
 window.onload = function (e) {
-  header.classList.add('fixed');
+  //header.classList.add('fixed');
   setTimeout(()=>{
     preloader.classList.add('hidden');
     html.classList.remove('overflow-hidden');
@@ -194,10 +194,10 @@ window.onscroll = function(e) {
     const scrollingDown = offsetTop > previousScrollPosition;
     if(offsetTop > header.clientHeight/2) {
       if(scrollingDown) {
-        //header.classList.add('fixed');
+        header.classList.add('fixed');
       }
     } else if(offsetTop == 0) {
-      //header.classList.remove('fixed');
+      header.classList.remove('fixed');
     }
     previousScrollPosition = offsetTop;
   }
