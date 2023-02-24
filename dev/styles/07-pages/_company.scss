@@ -1,0 +1,652 @@
+.company-page {
+  .hero {
+    background: url(../../img/company/heroBG.jpg) center no-repeat;
+    background-size: cover;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    }
+    @media(max-width: $md){
+      background-position: center right -160px;
+    
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+      //background-position: center right -360px;
+    }
+    
+    .section-subtitle {
+      margin-bottom: 12px;
+    }
+    .section-text {
+      @media(max-width: $xs) {
+        max-width: 280px;
+      }
+    }
+    .container {
+      * {
+        @media(min-width: $md){
+          text-align: left;
+          margin-left: 0;
+        
+        }
+      }
+    }
+  }
+}
+
+.presidentInfo {
+  background: #F9FAFB;
+}
+
+.president {
+  box-shadow: $box-shadow-1;
+  display: flex;
+  margin-bottom: 66px;
+  @media(max-width: $xl){
+
+  }
+  @media(max-width: $lg){
+
+  }
+  @media(max-width: $md){
+    flex-direction: column-reverse;
+    margin-bottom: 43px;
+  }
+  @media(max-width: $sm){
+
+  }
+  @media(max-width: $xs){
+
+  }
+
+  & > * {
+    width: 50%;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      width: 100%;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__descr {
+    padding: 40px;
+    background: $color-text2;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      padding: 27px;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  &__header-imgContainer {
+    width: 64px;
+    height: 64px;
+    border-radius: 100px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  &__header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+  &__header-text {
+  }
+  &__header-name {
+    font-size: 22px;
+  }
+  &__header-post {
+    font-size: 14px;
+    @extend .text-gradient;
+  }
+  &__text {
+    color: #646E76;
+  }
+  &__video {
+    position: relative;
+    overflow: hidden;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      height: 294px;
+    }
+    @media(max-width: $sm){
+    }
+    @media(max-width: $xs){
+      height: 220px;
+    
+    }
+    
+  }
+  &__video-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .button {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    &--blur-to-gradient {
+    }
+    &--play {
+    }
+    &__bg {
+    }
+    &__content {
+    }
+  }
+}
+
+
+.glance {
+  display: flex;
+  @media(max-width: $xl){
+
+  }
+  @media(max-width: $lg){
+
+  }
+  @media(max-width: $md){
+    flex-direction: column;
+    gap: 47px;
+  }
+  @media(max-width: $sm){
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  @media(max-width: $xs){
+
+  }
+
+  & > * {
+    width: 50%;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      width: 100%;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  
+  .lazy {
+  }
+  &__images {
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      height: 345px;
+    }
+    @media(max-width: $sm){
+      height: 269px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    .row {
+      margin-left: -7px;
+      margin-right: -7px;
+      height: 100%;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+      
+      }
+      @media(max-width: $sm){
+        
+      }
+      @media(max-width: $xs){
+        flex-direction: row-reverse;
+      }
+      
+      & > * {
+        padding-right: 7px;
+        padding-left: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+          
+        }
+        @media(max-width: $sm){
+        
+        }
+        @media(max-width: $xs){
+          
+        }
+        &:nth-of-type(2) {
+          flex-direction: column-reverse;
+        }
+      }
+    }
+  }
+  &__image {
+    
+    width: 100%;
+    object-fit: cover;
+    &--1 {
+      height: 100%;
+    }
+    &--2 {
+      height: 60%;
+    }
+    &--3 {
+      height: calc(40% - 14px);
+    }
+  }
+  &__info {
+    padding: 0 15px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      padding: 0;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    .section-header {
+      margin-bottom: 15px;
+    }
+    .section-title {
+      
+    }
+  }
+  &__info-list {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.2;
+    background: url(../../img/company/lines1.svg) center top 5px no-repeat;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      background: url(../../img/company/lines2.svg) center top -5px no-repeat;
+    }
+    @media(max-width: $sm){
+      background: url(../../img/company/lines1.svg) center top 5px no-repeat;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__info-el {
+    width: 50%;
+    min-height: 98px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      width: calc(100%/3);
+    }
+    @media(max-width: $sm){
+      width: 50%;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__info-el-title {
+    font-size: 32px;
+    @extend .text-gradient;
+
+  }
+  &__info-el-value {
+    font-size: 13px;
+  }
+}
+
+.recognitions {
+  background: #F9FAFB url(../../img/map.png) center top 150px no-repeat;
+  background-size: 860px;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    background-size: 630px;
+    background-position-y: 130px;
+  }
+  @media(max-width: $sm){
+    background-size: 434px;
+    background-position-y: 150px;
+
+  }
+  @media(max-width: $xs){
+    background-position-y: 170px;
+  
+  }
+  
+  .container {
+  }
+  .section-header {
+  }
+  .section-subtitle {
+  }
+  .section-title {
+  }
+  &__list {
+    margin-top: 160px;
+    margin-bottom: 140px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 893px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      margin-top: 120px;
+      margin-bottom: 100px;
+    }
+    @media(max-width: $sm){
+      max-width: 312px;
+      margin-top: 60px;
+      margin-top: 55px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__list-el {
+    box-shadow: $box-shadow-1;
+    height: 70px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      height: 55px;
+    }
+    @media(max-width: $sm){
+      &:nth-of-type(1) {
+        order: 4;
+      }
+      &:nth-of-type(2) {
+        order: 1;
+        height: 60px;
+      }
+      &:nth-of-type(3) {
+        order: 2;
+        height: 60px;
+      }
+      &:nth-of-type(4) {
+        order: 6;
+      }
+      &:nth-of-type(5) {
+        order: 3;
+        height: 60px;
+      }
+      &:nth-of-type(6) {
+        order: 5;
+      }
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__list-el-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+
+.live {
+  &--ship {
+    background: url(../../img/company/ship.jpg) center no-repeat;
+    background-size: cover;
+    min-height: 418px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+    
+    }
+    @media(max-width: $sm){
+      min-height: 469px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    .container {
+    }
+    .section-text {
+      margin-bottom: 0;
+    }
+    .live {
+      &__body {
+        padding: 42px 32px;
+        max-width: 435px;
+        margin-right: 0;
+        margin-left: auto;
+        position: relative;
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+          max-width: 398px;
+
+        }
+        @media(max-width: $sm){
+          padding: 40px 28px;
+
+        }
+        @media(max-width: $xs){
+        
+        }
+        
+        &::before {
+          display: flex;
+          width: 46px;
+          height: 45px;
+          border-radius: 100px;
+          background: $color-text2 url(../../img/company/quotes-grey.svg) center no-repeat;
+          content: '';
+          position: absolute;
+          top: -26px;
+          left: 32px;
+        }
+      }
+      &__author {
+      }
+    }
+  }
+  &--president {
+    background: url(../../img/company/hall.jpg) center top no-repeat;
+    
+    background-size: cover;
+    min-height: 392px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      background-size: 130vw;
+    }
+    @media(max-width: $sm){
+      min-height: 469px;
+      background-size: cover;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    .container {
+    }
+    .section-text {
+    }
+    .live {
+      &__body {
+        padding: 42px 32px;
+        max-width: 435px;
+        margin-right: auto;
+        margin-left: 0;
+        position: relative;
+        background: rgba(0, 0, 0, 0.45);
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+          max-width: 398px;
+
+        }
+        @media(max-width: $sm){
+          padding: 40px 28px;
+
+        }
+        @media(max-width: $xs){
+        
+        }
+        
+        &::before {
+          display: flex;
+          width: 46px;
+          height: 45px;
+          border-radius: 100px;
+          background: $color-text2 url(../../img/company/quotes-grey.svg) center no-repeat;
+          content: '';
+          position: relative;
+          top: -14px;
+          @media(max-width: $xl){
+          
+          }
+          @media(max-width: $lg){
+          
+          }
+          @media(max-width: $md){
+          
+          }
+          @media(max-width: $sm){
+            top: -26px;
+            left: 32px;
+            position: absolute;
+          }
+          @media(max-width: $xs){
+          
+          }
+          
+        }
+      }
+      &__author {
+        font-size: 16px;
+        font-weight: 600;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+

@@ -15,6 +15,19 @@
 .swiper-container {
   position: relative;
 }
+.check-blue-before {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20.5px;
+    height: 20.5px;
+    background: url(../img/check-blue.svg) center no-repeat;
+    background-size: contain;
+  }
+}
 @media (min-width: 768px) {
   .container, .container-lg, .container-md, .container-sm {
     max-width: 660px !important;
@@ -193,8 +206,7 @@ body {
       font-weight: 300 !important;
     }
     @media(max-width: $xs) {
-      width: calc(100% + 20px);
-      left: -10px;
+     
     }
 
   }
@@ -1711,6 +1723,8 @@ body {
   background: url(../img/liveTheLifeBG.jpg) top 10% center no-repeat;
   padding: 60px 0;
   background-size: cover;
+  display: flex;
+  align-items: center;
   @media(max-width: 1500px) {
     background-size: 1614px;
   }
@@ -2579,3 +2593,5 @@ body {
     }
   }
 }
+
+

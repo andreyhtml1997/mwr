@@ -123,4 +123,18 @@
       }
     }
   }
+  &--play {
+    display: flex;
+    width: 59px;
+    height: 59px;
+    border-radius: 100px;
+    .button__bg {
+      border: none !important;
+      border-radius: 100px;
+    }
+    img {
+      position: relative;
+      left: 2px;
+    }
+  }
 }
