@@ -863,7 +863,7 @@
   }
   .choices__list--dropdown {
     display: flex !important;
-    @media(max-width: $md) {
+    @media(max-width: $sm) {
       transition: transform 0.4s ease;
       visibility: visible;
       transform: translateX(-100%);
@@ -878,7 +878,7 @@
     }
     .choices__list--dropdown {
       display: flex !important;
-      @media(max-width: $md) {
+      @media(max-width: $sm) {
         transform: translateX(0%);
       }
     }

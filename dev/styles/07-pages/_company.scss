@@ -1,6 +1,6 @@
 .company-page {
   .hero {
-    background: url(../../img/company/heroBG.jpg) center no-repeat;
+    background: url(../img/company/heroBG.jpg) center no-repeat;
     background-size: cover;
     height: calc(100vh - 310px);
     height: calc(var(--vh, 1vh) * 100 - 310px);
@@ -334,7 +334,7 @@
     display: flex;
     flex-wrap: wrap;
     line-height: 1.2;
-    background: url(../../img/company/lines1.svg) center top 5px no-repeat;
+    background: url(../img/company/lines1.svg) center top 5px no-repeat;
     @media(max-width: $xl){
     
     }
@@ -342,10 +342,10 @@
     
     }
     @media(max-width: $md){
-      background: url(../../img/company/lines2.svg) center top -5px no-repeat;
+      background: url(../img/company/lines2.svg) center top -5px no-repeat;
     }
     @media(max-width: $sm){
-      background: url(../../img/company/lines1.svg) center top 5px no-repeat;
+      background: url(../img/company/lines1.svg) center top 5px no-repeat;
     }
     @media(max-width: $xs){
     
@@ -389,7 +389,7 @@
 }
 
 .recognitions {
-  background: #F9FAFB url(../../img/map.png) center top 150px no-repeat;
+  background: #F9FAFB url(../img/map.png) center top 150px no-repeat;
   background-size: 860px;
   @media(max-width: $xl){
   
@@ -427,7 +427,7 @@
     max-width: 893px;
     margin-left: auto;
     margin-right: auto;
-    flex-wrap: wrap;
+    column-gap: 30px;
     row-gap: 10px;
     @media(max-width: $xl){
     
@@ -438,11 +438,14 @@
     @media(max-width: $md){
       margin-top: 120px;
       margin-bottom: 100px;
+      column-gap: 13px;
     }
     @media(max-width: $sm){
       max-width: 312px;
       margin-top: 60px;
       margin-top: 55px;
+      flex-wrap: wrap;
+      column-gap: 0;
     }
     @media(max-width: $xs){
     
@@ -452,6 +455,7 @@
   &__list-el {
     box-shadow: $box-shadow-1;
     height: 70px;
+    background-color: $color-text2;
     @media(max-width: $xl){
     
     }
@@ -464,24 +468,30 @@
     @media(max-width: $sm){
       &:nth-of-type(1) {
         order: 4;
+        width: 30.76%;
       }
       &:nth-of-type(2) {
         order: 1;
         height: 60px;
+        width: 31.2%;
       }
       &:nth-of-type(3) {
         order: 2;
         height: 60px;
+        width: 33.97%;
       }
       &:nth-of-type(4) {
         order: 6;
+        width: 42.3%;
       }
       &:nth-of-type(5) {
         order: 3;
         height: 60px;
+        width: 27.24%;
       }
       &:nth-of-type(6) {
         order: 5;
+        width: 19.87%;
       }
     }
     @media(max-width: $xs){
@@ -492,14 +502,14 @@
   &__list-el-img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 
 
 .live {
   &--ship {
-    background: url(../../img/company/ship.jpg) center no-repeat;
+    background: url(../img/company/ship.jpg) center no-repeat;
     background-size: cover;
     min-height: 418px;
     @media(max-width: $xl){
@@ -553,7 +563,7 @@
           width: 46px;
           height: 45px;
           border-radius: 100px;
-          background: $color-text2 url(../../img/company/quotes-grey.svg) center no-repeat;
+          background: $color-text2 url(../img/company/quotes-grey.svg) center no-repeat;
           content: '';
           position: absolute;
           top: -26px;
@@ -565,7 +575,7 @@
     }
   }
   &--president {
-    background: url(../../img/company/hall.jpg) center top no-repeat;
+    background: url(../img/company/hall.jpg) center top no-repeat;
     
     background-size: cover;
     min-height: 392px;
@@ -621,7 +631,7 @@
           width: 46px;
           height: 45px;
           border-radius: 100px;
-          background: $color-text2 url(../../img/company/quotes-grey.svg) center no-repeat;
+          background: $color-text2 url(../img/company/quotes-grey.svg) center no-repeat;
           content: '';
           position: relative;
           top: -14px;

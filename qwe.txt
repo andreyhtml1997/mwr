@@ -5,12 +5,13 @@
     right: 0;
     margin: auto;
     position: absolute;
+    content: '';
 
 
     height: 100%;
     width: 100%;
     object-fit: cover;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+display: flex;
+align-items: center;
+justify-content: center;

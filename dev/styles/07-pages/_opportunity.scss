@@ -1,13 +1,14 @@
 .opportunity-page {
   .hero {
-    background: url(../../img/opportunity/heroBG.jpg) center no-repeat;
+    background: url(../img/opportunity/heroBG.jpg) center no-repeat;
     background-size: cover;
+    height: calc(100vh - 250px);
+    height: calc(var(--vh, 1vh) * 100 - 250px);
     @media(max-width: $xl){
     
     }
     @media(max-width: $lg){
-      height: calc(100vh - 250px);
-      height: calc(var(--vh, 1vh) * 100 - 250px);
+      
     }
     @media(max-width: $md){
       height: calc(100vh - 185px);
@@ -123,7 +124,7 @@
     
     &::before {
       top: 1px;
-      background-image: url(../../img/icon-circle-gradient.svg);
+      background-image: url(../img/icon-circle-gradient.svg);
       counter-increment: a;
       content: counter(a);
       height: 19px;
@@ -133,7 +134,7 @@
     border: 0.742361px solid #D6DADE;
     padding: 30px;
     margin-bottom: 35px;
-    background: url(../../img/opportunity/quotes.svg) 17px 13px no-repeat;
+    background: url(../img/opportunity/quotes.svg) 17px 13px no-repeat;
     max-width: 400px;
     @media(max-width: $md){
       margin-right: auto;
@@ -445,7 +446,7 @@
     }
     &:nth-of-type(1) {
       .itWorks__el-imgContainer {
-        background-image: url(../../img/opportunity/photo2-1.jpg);
+        background-image: url(../img/opportunity/photo2-1.jpg);
       }
       .itWorks__el-img {
         @media(min-width: $md){
@@ -455,12 +456,12 @@
     }
     &:nth-of-type(2) {
       .itWorks__el-imgContainer {
-        background-image: url(../../img/opportunity/photo2-2.jpg);
+        background-image: url(../img/opportunity/photo2-2.jpg);
       }
     }
     &:nth-of-type(3) {
       .itWorks__el-imgContainer {
-        background-image: url(../../img/opportunity/photo2-3.jpg);
+        background-image: url(../img/opportunity/photo2-3.jpg);
       }
       .itWorks__el-line {
         display: none;
@@ -626,7 +627,7 @@
 
 .live {
   &--join {
-    background: url(../../img/opportunity/joinBG.jpg) center top -18vw no-repeat;
+    background: url(../img/opportunity/joinBG.jpg) center top -18vw no-repeat;
     background-size: cover;
     min-height: 390px;
     @media(max-width: $xl){
