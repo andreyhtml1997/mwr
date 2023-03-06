@@ -5,8 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Past Events</title>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="stylesheet" href="libs/bootstrap-5.2.3/bootstrap.min.css">
-  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+  
   <link rel="stylesheet"href="libs/choices/choices.min.css">
   <link
   rel="stylesheet"
@@ -493,7 +494,6 @@
   </div>
 </div>
   <script src="libs/bootstrap-5.2.3/bootstrap.bundle.min.js"></script>
-  <script src="libs/swiper/swiper-bundle.min.js"></script>
   <script src="libs/lazyload.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
   <script src="libs/smooth-scrollbar/smooth-scrollbar.js"></script>
@@ -505,45 +505,6 @@
     const myLazyLoad = new LazyLoad();
     myLazyLoad.update();
   </script>
-  <!-- <script>
-    const mySelect = document.getElementById('my-select');
-    const select = new Choices(mySelect, {
-      renderSelectedChoices: 'always', // Don't show result in choices__inner
-      shouldSort: false, // Show choices items in dropdown always
-      searchEnabled: true, // Searchable
-      searchPlaceholderValue: 'Select Gallery', // Search placeholder = "Select Gallery"
-      removeItems: false,
-      
-      // Add a listener for the "click" event on the dropdown items
-      callbackOnMousedown: function(event) {
-        // Check if the target is a selected item
-        const selectedItem = event.target.closest('.choices__item--selectable.selected');
-        if (selectedItem) {
-          // Deselect the item
-          choices.removeActiveItemsByValue(selectedItem.getAttribute('data-value'));
-        }
-      }
-     });
-    // Add an event listener to the click event on the dropdown items
-    const dropdown = select.choiceList.element;
-    dropdown.addEventListener('click', event => {
-      // Check if the clicked element has the choices__item class
-      const choicesItem = event.target.closest('.choices__item');
-      console.log(choicesItem);
-      if (choicesItem) {
-        // Get the value of the clicked item
-        const value = choicesItem.getAttribute('data-value');
-        // Deselect the item
-        select.removeActiveItemsByValue(value);
-      }
-    });
-
-    const searchInput = select.containerOuter.element.querySelector('.choices__input.choices__input--cloned');
-    searchInput.placeholder = "Select Your Gallery";
-    console.log(searchInput);
-    const dropdownList = select.dropdown.element;
-    dropdownList.insertBefore(searchInput, dropdownList.firstChild);
-  </script> -->
 
 
 </body>

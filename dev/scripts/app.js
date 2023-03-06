@@ -247,8 +247,25 @@ document.querySelectorAll('.modal').forEach(el => {
   })
 })
 
-
-
+if(document.querySelectorAll(".calendar-table .dropdown-menu__inner")) {
+  document.querySelectorAll(".calendar-table .dropdown-menu__inner").forEach(el => {
+    Scrollbar.init(el, {
+      thumbMinSize: 80,
+      alwaysShowTracks: true
+    });
+  })
+}
+if(document.querySelectorAll('.dropdown-selectalbe')) {
+  document.querySelectorAll('.dropdown-selectalbe').forEach(el => {
+    el.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', function(e) {
+        el.querySelectorAll('.dropdown-item').forEach(el => el.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+        el.querySelector('.dropdown-selectalbe__title').textContent = e.currentTarget.textContent;
+      });
+    })
+  })
+}
 
 const createDropdownSearchable = function(dropdown) {
   const checkAll = dropdown.querySelector('[data-value="all"]');
@@ -308,6 +325,13 @@ const createDropdownSearchable = function(dropdown) {
   });
 }
 
+const calendarTable = document.querySelector('.calendar-table__container');
+if(calendarTable) {
+Scrollbar.init(calendarTable, {
+  thumbMinSize: 80,
+  alwaysShowTracks: true
+});
+}
 const dropdownsSearchable = document.querySelectorAll('.dropdown-searchable');
 if(dropdownsSearchable) {
   dropdownsSearchable.forEach(el => {

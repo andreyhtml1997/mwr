@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-hidden">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Event Page</title>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="libs/bootstrap-5.2.3/bootstrap.min.css">
+  
+  <link rel="stylesheet"href="libs/choices/choices.min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+/>
+  <link rel="stylesheet" href="styles/main.css">
+  
+</head>
+
+<body class="overflow-hidden">
+  //= template/preloader.html
+  //= template/header-dark.html
+<main class="simple-page">
+  
+  <section class="section reg-event section--first">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-subtitle">Register Today</h3>
+        <h2 class="section-title">Elevation 2023 Conference</h2>
+      </div>
+      <div class="reg-event__body">
+        <div class="reg-event__imgContainer">
+          <img src="img/elevation.jpg" alt="img" class="reg-event__img">
+        </div>
+        <div class="block calendar-table-container">
+          <div class="block__header">
+            <h3 class="h3">ELEVATION 2023 Registration</h3>
+            <div class="calendar-header-bottom">
+              <p class="section-text">
+                
+                <span class="date">Saturday April 22, 2023 - <br class="d-md-none d-block"> Sunday April 23, 2023 
+                </span>
+                <span class="time">8:00 AM - 8:00 PM</span>
+              </p>
+              <button type="button" class="add-to-calendar">Add To Calendar</button>
+            </div>
+
+          </div>
+          <div class="calendar-table__container">
+            <table class="calendar-table">
+              <thead>
+                <tr>
+                  <th>Admission Tickets</th>
+                  <th>Price</th>
+                  <th>Qty</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ELEVATION 2023 - General Admission</td>
+                  <td>$149.00 (USD)</td>
+                  <td>
+                    <div class="dropdown dropdown-selectalbe">
+                      <button class="dropdown__header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="dropdown-selectalbe__title">1</span>
+                        <span class="dropdown__arrow"></span>
+                      </button>
+                      <div class="dropdown-menu">
+                        <div class="dropdown-menu__inner">
+                          <div class="dropdown-item active">1</div>
+                          <div class="dropdown-item">2</div>
+                          <div class="dropdown-item">3</div>
+                          <div class="dropdown-item">4</div>
+                          <div class="dropdown-item">5</div>
+                          <div class="dropdown-item">6</div>
+                          <div class="dropdown-item">7</div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>ELEVATION 2023 - VIP Admission</td>
+                  <td>$199.00 (USD)</td>
+                  <td>
+                    <div class="qty__sold-out">Sold Out</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="button-container">
+            <button type="button" class="button button--gradiet-to-border-transparent">
+              <span class="button__bg"></span>
+              <span class="button__content">
+                <span class="button__text">
+                  register now
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="block join-us">
+          <div class="block__header">
+            <h3 class="h3">Join us in Florence, Italy for the 2023 ELEVATION CONFERENCE!</h3>
+            <p class="section-text">You won’t want to miss the exciting announcements, recognition, and amazing training at this 2-day event Buy your ticket now and reserve your seat for this amazing event!
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="join-us__el">
+                <h3 class="h3">Event Details</h3>
+                <ul>
+                  <li> <span class="fw-600"> Location:</span> Florence, Italy</li>
+                  <li> <span class="fw-600"> Date:</span> April 22-23, 2023</li>
+                  <li> <span class="fw-600"> Venue:</span> Teatro Tuscany Hall – via Fabrizio de André angolo, Lungarno Aldo Moro, 3, 50136 Firenze FI, Italy</li>
+                  <li> <span class="fw-600"> Hours:</span> 8:00 AM to 8:00 PM</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="join-us__el">
+                <h3 class="h3">More Information</h3>
+                <ul>
+                  <li>We do not guarantee translations.</li>
+                  <li>This event is for Active & Qualified Lifestyle Ambassadors only, no guests will be allowed</li>
+                  <li>Age Restrictions: Must be 16 or older to attend.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <div class="block__header">
+            <h3 class="h3">frequently asked questions</h3>
+          </div>
+          <div class="faq" id="faq">
+            <div class="faq__el">
+              <div class="faq__el-header" data-bs-toggle="collapse" data-bs-target="#el1" aria-expanded="true">
+                What is the refund policy?
+                <span class="dropdown__arrow"></span>
+              </div>
+              <div id="el1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                <p class="faq__el-content">
+                  Yes, there should be a paid parking area at the venue.
+                </p>
+              </div>
+            </div>
+            <div class="faq__el">
+              <div class="faq__el-header" data-bs-toggle="collapse" data-bs-target="#el2" aria-expanded="false">
+                Is my ticket transferable?
+                <span class="dropdown__arrow"></span>
+              </div>
+              <div id="el2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <p class="faq__el-content">
+                  Yes, there should be a paid parking area at the venue.
+                </p>
+              </div>
+            </div>
+            <div class="faq__el">
+              <div class="faq__el-header" data-bs-toggle="collapse" data-bs-target="#el3" aria-expanded="false">
+                Do I have to bring my ticket to be able to enter the event?
+                <span class="dropdown__arrow"></span>
+              </div>
+              <div id="el3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <p class="faq__el-content">
+                  Yes, there should be a paid parking area at the venue.
+                </p>
+              </div>
+            </div>
+            <div class="faq__el">
+              <div class="faq__el-header" data-bs-toggle="collapse" data-bs-target="#el4" aria-expanded="false">
+                How should I dress?
+                <span class="dropdown__arrow"></span>
+              </div>
+              <div id="el4" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <p class="faq__el-content">
+                  Yes, there should be a paid parking area at the venue.
+                </p>
+              </div>
+            </div>
+            <div class="faq__el">
+              <div class="faq__el-header" data-bs-toggle="collapse" data-bs-target="#el5" aria-expanded="false">
+                Can I come by car and park easily?
+                <span class="dropdown__arrow"></span>
+              </div>
+              <div id="el5" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <p class="faq__el-content">
+                  Yes, there should be a paid parking area at the venue.
+                </p>
+              </div>
+            </div>
+            <div class="faq__el">
+              <div class="faq__el-header" data-bs-toggle="collapse" data-bs-target="#el6" aria-expanded="false">
+                Is access to public transportation easy?
+                <span class="dropdown__arrow"></span>
+              </div>
+              <div id="el6" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <p class="faq__el-content">
+                  Yes, there should be a paid parking area at the venue.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+  //= template/footer.html
+
+<div class="modal modal--video fade" id="modalVideo1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-body p-0 d-flex align-items-center">
+            <video src="img/membership/video.mp4" controls></video>
+          </div>
+      </div>
+  </div>
+</div>
+  <script src="libs/bootstrap-5.2.3/bootstrap.bundle.min.js"></script>
+  <script src="libs/lazyload.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="libs/smooth-scrollbar/smooth-scrollbar.js"></script>
+  <script src="libs/smooth-scrollbar/plugins/overscroll.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  
+  <script src="scripts/app.js" defer></script>
+  <script>
+    const myLazyLoad = new LazyLoad();
+    myLazyLoad.update();
+  </script>
+
+
+</body>
+
+</html>
