@@ -34,6 +34,41 @@ const Scrollbar = window.Scrollbar;
 Scrollbar.use(OverscrollPlugin);
 
 
+const pastEventTriggers = document.querySelectorAll('.past-events__el-content-header');
+const images = [{
+  src  : 'img/past-events/1.jpg',
+  thumb: 'img/past-events/1.jpg',
+  caption: "image1"
+}, {
+  src  : 'img/past-events/2.jpg',
+  thumb: 'img/past-events/2.jpg',
+  caption: "image2"
+}, {
+  src  : 'img/past-events/3.jpg',
+  thumb: 'img/past-events/3.jpg',
+  caption: "image3"
+}, {
+  src  : 'img/past-events/4.jpg',
+  thumb: 'img/past-events/4.jpg',
+  caption: "image4"
+}, {
+  src  : 'img/past-events/5.jpg',
+  thumb: 'img/past-events/5.jpg',
+  caption: "image5"
+}];
+if(pastEventTriggers) {
+  pastEventTriggers.forEach((el, i) => {
+    el.addEventListener('click', function() {
+      
+      Fancybox.show(images, {
+        Thumbs: {
+          type: "classic",
+        },
+      });
+    })
+  });
+}
+
 
 
 /**swiper function*/
@@ -211,3 +246,72 @@ document.querySelectorAll('.modal').forEach(el => {
     e.currentTarget.querySelector('video').pause();
   })
 })
+
+
+
+
+const createDropdownSearchable = function(dropdown) {
+  const checkAll = dropdown.querySelector('[data-value="all"]');
+  const dropdownSearch = dropdown.querySelector('.events-select__search input');
+  const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+  const dropdownListContainer = dropdown.querySelector('.events-select__list');
+  const dropdownList = dropdown.querySelectorAll('.events-select__list [type="checkbox"]');
+  const searchClear = dropdown.querySelector('.search-clear');
+  const dropdownSearchClear = () => dropdownSearch.value = "";
+  const setActualList = function() {
+    dropdownList.forEach(el => {
+      const setDisplay = (value) => {el.parentElement.style.display = value;}
+      if(el.value.includes(dropdownSearch.value)) {
+        setDisplay("flex");
+      } else {
+        setDisplay("none");
+      }
+    })
+   
+  };
+  
+  searchClear.addEventListener('click', function(e) {
+    dropdownSearchClear();
+    setActualList();
+    dropdownSearch.focus();
+    e.currentTarget.classList.remove('active');
+  })
+  dropdownSearch.addEventListener('input', function(e){
+    setActualList();
+    if(e.currentTarget.value) {
+      searchClear.classList.add('active');
+    } else {
+      searchClear.classList.remove('active');
+    }
+  });
+  dropdownMenu.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+  dropdownList.forEach(el => {
+    el.addEventListener('change', function(){
+      if(!el.checked) {
+        checkAll.checked = el.checked;
+      }
+    })
+  });
+  checkAll.addEventListener('change', function(){
+    dropdownSearchClear();
+    setActualList();
+    dropdownList.forEach(el => {
+      el.checked = checkAll.checked;
+    });
+    searchClear.classList.remove('active');
+  });
+  Scrollbar.init(dropdownListContainer, {
+    thumbMinSize: 80,
+    alwaysShowTracks: true
+  });
+}
+
+const dropdownsSearchable = document.querySelectorAll('.dropdown-searchable');
+if(dropdownsSearchable) {
+  dropdownsSearchable.forEach(el => {
+    createDropdownSearchable(el);
+  });
+  
+}

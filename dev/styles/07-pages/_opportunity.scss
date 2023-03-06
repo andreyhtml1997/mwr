@@ -2,8 +2,8 @@
   .hero {
     background: url(../img/opportunity/heroBG.jpg) center no-repeat;
     background-size: cover;
-    height: calc(100vh - 250px);
-    height: calc(var(--vh, 1vh) * 100 - 250px);
+    //height: calc(100vh - 250px);
+    //height: calc(var(--vh, 1vh) * 100 - 250px);
     @media(max-width: $xl){
     
     }
@@ -11,12 +11,12 @@
       
     }
     @media(max-width: $md){
-      height: calc(100vh - 185px);
-      height: calc(var(--vh, 1vh) * 100 - 185px);
+      //height: calc(100vh - 185px);
+      //height: calc(var(--vh, 1vh) * 100 - 185px);
     }
     @media(max-width: $sm){
-      height: calc(100vh - 220px);
-      height: calc(var(--vh, 1vh) * 100 - 220px);
+      //height: calc(100vh - 220px);
+      //height: calc(var(--vh, 1vh) * 100 - 220px);
       
     }
     @media(max-width: $xs){

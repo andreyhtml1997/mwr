@@ -2,8 +2,8 @@
   .hero {
     background: url(../img/company/heroBG.jpg) center no-repeat;
     background-size: cover;
-    height: calc(100vh - 310px);
-    height: calc(var(--vh, 1vh) * 100 - 310px);
+    // height: calc(100vh - 310px);
+    // height: calc(var(--vh, 1vh) * 100 - 310px);
     @media(max-width: $xl){
     
     }

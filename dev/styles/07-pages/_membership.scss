@@ -1,10 +1,10 @@
 .membership-page {
   .hero {
     background-image: url(../img/membership/heroBG.jpg);
-    height: calc(var(--vh, 1vh) * 100 - 130px);
+    // height: calc(var(--vh, 1vh) * 100 - 130px);
     min-height: 350px;
     @media(max-width: $sm){
-      height: calc(var(--vh, 1vh) * 100 - 150px);
+      // height: calc(var(--vh, 1vh) * 100 - 150px);
     }
     @media(max-width: $xl) {
       //background-position: left -200px center;
@@ -1125,7 +1125,7 @@
       top: -1px;
       width: 16px;
       height: 15px;
-      background: url(../img/check-blue-2.svg) center no-repeat;
+      background: url(../img/icons/check-blue-2.svg) center no-repeat;
       background-size: contain;
       @media(max-width: $xl){
       

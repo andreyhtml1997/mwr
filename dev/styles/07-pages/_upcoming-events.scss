@@ -1,0 +1,252 @@
+.upcomingEvents-page {
+  .hero {
+    background: url(../img/upcoming-events/heroBG.jpg) center no-repeat;
+    background-size: cover;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    .section-subtitle {
+      margin-bottom: 20px;
+    }
+    .section-title {
+      max-width: 390px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 18px;
+    }
+    .section-text {
+      font-size: 16px;
+      max-width: 570px;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        
+      }
+      @media(max-width: $sm){
+        max-width: 310px;
+        font-size: 14px;
+      }
+      @media(max-width: $xs){
+      
+      }
+      
+    }
+  }
+}
+.upcoming-events {
+  .row {
+    row-gap: 15px;
+    justify-content: center;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md) and (min-width: $sm) {
+      margin-left: -7px;
+      margin-right: -7px;
+    }
+    @media(max-width: $sm){
+      row-gap: 30px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    & > * {
+      @media(max-width: $md) and (min-width: $sm) {
+        padding-left: 7px;
+        padding-right: 7px;
+      }
+    }
+  }
+  .button {
+    &--gradiet-to-border-transparent {
+    }
+    &__bg {
+    }
+    &__content {
+    }
+    &__text {
+    }
+    &::after {
+      @media(min-width: $sm){
+        display: none;
+      }
+    }
+  }
+}
+
+.eventCard {
+  box-shadow: 0px 14.02px 30.08px rgba(52, 60, 71, 0.05);
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  &__imgContainer {
+    height: 162px;
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+  }
+  &__descr {
+    padding: 20px;
+    border-image-source: $gradient0 !important;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-top: none;
+  }
+  &__date {
+    font-size: 14px;
+    font-weight: 500;
+    @extend .text-gradient;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  &__list {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__list-el {
+    padding-left: 11px;
+    position: relative;
+    &:before {
+      top: 8px;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 2px;
+      border-radius: 10px;
+      background-color: $color-text;
+
+    }
+  }
+  &__list-el-bold {
+    font-weight: 500;
+  }
+  &:hover {
+    .eventCard {
+      &__descr {
+        border-image-source: $gradient1 !important;
+      }
+    }
+  }
+}
+
+
+.hovered-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 70px;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    margin-top: 60px;
+    
+  }
+  @media(max-width: $sm){
+    row-gap: 2px;
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
+  &__group {
+    width: calc(25% - 2px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      height: 346px;
+    }
+    @media(max-width: $sm){
+      height: 380px;
+      width: calc(50% - 1px);
+    }
+    @media(max-width: $xs){
+      height: 295px;
+    }
+    
+    &:nth-of-type(even) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__el {
+    &:nth-of-type(1) {
+      height: calc(60% - 3px);
+    }
+    &:nth-of-type(2) {
+      height: 40%;
+    }
+    &:hover {
+      .hovered-images__el-img {
+        filter: grayscale(0%);
+      }
+    }
+  }
+  &__el-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+  }
+
+}

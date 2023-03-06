@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-hidden">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Events</title>
+  <link rel="stylesheet" href="libs/bootstrap-5.2.3/bootstrap.min.css">
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet"href="libs/choices/choices.min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+/>
+  <link rel="stylesheet" href="styles/main.css">
+  
+</head>
+
+<body class="overflow-hidden">
+  //= template/preloader.html
+  //= template/header-dark.html
+<main class="pastEvents-page">
+  
+  <section class="section past-events section--first">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-subtitle">Our Past Events</h3>
+        <h2 class="section-title">Photo Gallery</h2>
+      </div>
+      <div class="past-events__header">
+
+        <div class="dropdown events-select dropdown-searchable">
+          <button class="dropdown__header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Select Gallery
+            <span class="dropdown__arrow"></span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="events-select__search">
+              <input type="text" class="events-select__search-input" placeholder="Select Gallery">
+              <button class="search-clear" type="button"></button>
+            </div>
+            <label class="dropdown-item dropdown-item--special">
+              <input type="checkbox" class="events-select-checkbox" value="Show All" data-value="all">
+              <span class="checkbox__body">
+<span class="checkbox__box"></span>
+              <span class="checkbox__text">Show All</span></span>
+            </label>
+            <div class="events-select__list">
+              <label class="dropdown-item">
+                <input type="checkbox" class="events-select-checkbox" value="builders bootcamp #100">
+                <span class="checkbox__body">
+  <span class="checkbox__box"></span>
+                <span class="checkbox__text">builders bootcamp #100</span></span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" class="events-select-checkbox" value="elevation 2022, Day 2">
+                <span class="checkbox__body">
+  <span class="checkbox__box"></span>
+                <span class="checkbox__text">elevation 2022, Day 2</span></span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" class="events-select-checkbox" value="Elevation 2022, Day 1">
+                <span class="checkbox__body">
+  <span class="checkbox__box"></span>
+                <span class="checkbox__text">Elevation 2022, Day 1</span></span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" class="events-select-checkbox" value="velocity Conference 2019">
+                <span class="checkbox__body">
+  <span class="checkbox__box"></span>
+                <span class="checkbox__text">velocity Conference 2019</span></span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" class="events-select-checkbox" value="Elevation Conference 2019">
+                <span class="checkbox__body">
+  <span class="checkbox__box"></span>
+                <span class="checkbox__text">Elevation Conference 2019</span></span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" class="events-select-checkbox" value="Elevation Conference 2019">
+                <span class="checkbox__body">
+  <span class="checkbox__box"></span>
+                <span class="checkbox__text">Elevation Conference 2019</span></span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" class="events-select-checkbox" value="Elevation Conference 2019">
+                <span class="checkbox__body">
+  <span class="checkbox__box"></span>
+                <span class="checkbox__text">Elevation Conference 2019</span></span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" class="events-select-checkbox" value="Elevation Conference 2019">
+                <span class="checkbox__body">
+  <span class="checkbox__box"></span>
+                <span class="checkbox__text">Elevation Conference 2019</span></span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" class="events-select-checkbox" value="Elevation Conference 2019">
+                <span class="checkbox__body">
+  <span class="checkbox__box"></span>
+                <span class="checkbox__text">Elevation Conference 2019</span></span>
+              </label>
+              <label class="dropdown-item">
+                <input type="checkbox" class="events-select-checkbox" value="Elevation Conference 2019">
+                <span class="checkbox__body">
+  <span class="checkbox__box"></span>
+                <span class="checkbox__text">Elevation Conference 2019</span></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="sort">
+          <div class="dropdown">
+            <button class="dropdown__header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sort by
+              <span class="dropdown__arrow"></span>
+            </button>
+            <div class="dropdown-menu">
+              <div class="dropdown-item">By Date</div>
+              <div class="dropdown-item">By Name</div>
+            </div>
+          </div>
+          <button type="button" class="sort__button">
+            <img src="img/icons/arrows-top-down.svg" alt="sort" class="sort__button-img">
+          </button>
+        </div>
+      </div>
+      <div class="past-events__body">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <figure class="past-events__el">
+              <div class="past-events__el-video" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                <img src="img/past-events/1.jpg" alt="video" class="past-events__el-video-img"><img src="img/past-events/video1.jpg" alt="video" class="past-events__el-video-img past-events__el-video-img--video">
+                <button type="button" class="button button--blur-to-gradient button--play" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                  <span class="button__bg"></span>
+                  <span class="button__content">
+                    <img data-src="img/membership/icon-play.svg" alt="#" class="lazy">
+                  </span>
+                </button>
+              </div>
+              <div class="past-events__el-content">
+                <div class="past-events__el-content-header">
+                  <h3 class="past-events__el-title">Builders BootCamp #100</h3>
+                  <p class="past-events__el-views">View 203 images</p>
+                </div>
+                <div class="past-events__el-users">
+                  <div class="past-events__el-users-photos">
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                  </div>
+                  <div class="past-events__el-users-text">
+                    <p class="past-events__el-users-name">By Danielle Terpko</p>
+                    <time class="past-events__el-users-date">October 21, 2022</time>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <figure class="past-events__el">
+              <div class="past-events__el-video" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                <img src="img/past-events/2.jpg" alt="video" class="past-events__el-video-img"><img src="img/past-events/video1.jpg" alt="video" class="past-events__el-video-img past-events__el-video-img--video">
+                <button type="button" class="button button--blur-to-gradient button--play" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                  <span class="button__bg"></span>
+                  <span class="button__content">
+                    <img data-src="img/membership/icon-play.svg" alt="#" class="lazy">
+                  </span>
+                </button>
+              </div>
+              <div class="past-events__el-content">
+                <div class="past-events__el-content-header">
+                  <h3 class="past-events__el-title">Elevation 2022, Day 2</h3>
+                  <p class="past-events__el-views">View 203 images</p>
+                </div>
+                <div class="past-events__el-users">
+                  <div class="past-events__el-users-photos">
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                  </div>
+                  <div class="past-events__el-users-text">
+                    <p class="past-events__el-users-name">By Danielle Terpko</p>
+                    <time class="past-events__el-users-date">October 21, 2022</time>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <figure class="past-events__el">
+              <div class="past-events__el-video" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                <img src="img/past-events/3.jpg" alt="video" class="past-events__el-video-img"><img src="img/past-events/video1.jpg" alt="video" class="past-events__el-video-img past-events__el-video-img--video">
+                <button type="button" class="button button--blur-to-gradient button--play" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                  <span class="button__bg"></span>
+                  <span class="button__content">
+                    <img data-src="img/membership/icon-play.svg" alt="#" class="lazy">
+                  </span>
+                </button>
+              </div>
+              <div class="past-events__el-content">
+                <div class="past-events__el-content-header">
+                  <h3 class="past-events__el-title">Elevation 2022, Day 1</h3>
+                  <p class="past-events__el-views">View 203 images</p>
+                </div>
+                <div class="past-events__el-users">
+                  <div class="past-events__el-users-photos">
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                  </div>
+                  <div class="past-events__el-users-text">
+                    <p class="past-events__el-users-name">By Danielle Terpko</p>
+                    <time class="past-events__el-users-date">October 21, 2022</time>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <figure class="past-events__el">
+              <div class="past-events__el-video" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                <img src="img/past-events/4.jpg" alt="video" class="past-events__el-video-img"><img src="img/past-events/video1.jpg" alt="video" class="past-events__el-video-img past-events__el-video-img--video">
+                <button type="button" class="button button--blur-to-gradient button--play" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                  <span class="button__bg"></span>
+                  <span class="button__content">
+                    <img data-src="img/membership/icon-play.svg" alt="#" class="lazy">
+                  </span>
+                </button>
+              </div>
+              <div class="past-events__el-content">
+                <div class="past-events__el-content-header">
+                  <h3 class="past-events__el-title">Velocity Conference 2019</h3>
+                  <p class="past-events__el-views">View 203 images</p>
+                </div>
+                <div class="past-events__el-users">
+                  <div class="past-events__el-users-photos">
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                  </div>
+                  <div class="past-events__el-users-text">
+                    <p class="past-events__el-users-name">By Danielle Terpko</p>
+                    <time class="past-events__el-users-date">October 21, 2022</time>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <figure class="past-events__el">
+              <div class="past-events__el-video" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                <img src="img/past-events/5.jpg" alt="video" class="past-events__el-video-img"><img src="img/past-events/video1.jpg" alt="video" class="past-events__el-video-img past-events__el-video-img--video">
+                <button type="button" class="button button--blur-to-gradient button--play" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                  <span class="button__bg"></span>
+                  <span class="button__content">
+                    <img data-src="img/membership/icon-play.svg" alt="#" class="lazy">
+                  </span>
+                </button>
+              </div>
+              <div class="past-events__el-content">
+                <div class="past-events__el-content-header">
+                  <h3 class="past-events__el-title">Elevation Conference 2019</h3>
+                  <p class="past-events__el-views">View 203 images</p>
+                </div>
+                <div class="past-events__el-users">
+                  <div class="past-events__el-users-photos">
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                  </div>
+                  <div class="past-events__el-users-text">
+                    <p class="past-events__el-users-name">By Danielle Terpko</p>
+                    <time class="past-events__el-users-date">October 21, 2022</time>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <figure class="past-events__el">
+              <div class="past-events__el-video" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                <img src="img/past-events/6.jpg" alt="video" class="past-events__el-video-img"><img src="img/past-events/video1.jpg" alt="video" class="past-events__el-video-img past-events__el-video-img--video">
+                <button type="button" class="button button--blur-to-gradient button--play" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                  <span class="button__bg"></span>
+                  <span class="button__content">
+                    <img data-src="img/membership/icon-play.svg" alt="#" class="lazy">
+                  </span>
+                </button>
+              </div>
+              <div class="past-events__el-content">
+                <div class="past-events__el-content-header">
+                  <h3 class="past-events__el-title">Eruption Conference 2019</h3>
+                  <p class="past-events__el-views">View 203 images</p>
+                </div>
+                <div class="past-events__el-users">
+                  <div class="past-events__el-users-photos">
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                  </div>
+                  <div class="past-events__el-users-text">
+                    <p class="past-events__el-users-name">By Danielle Terpko</p>
+                    <time class="past-events__el-users-date">October 21, 2022</time>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <figure class="past-events__el">
+              <div class="past-events__el-video" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                <img src="img/past-events/7.jpg" alt="video" class="past-events__el-video-img"><img src="img/past-events/video1.jpg" alt="video" class="past-events__el-video-img past-events__el-video-img--video">
+                <button type="button" class="button button--blur-to-gradient button--play" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                  <span class="button__bg"></span>
+                  <span class="button__content">
+                    <img data-src="img/membership/icon-play.svg" alt="#" class="lazy">
+                  </span>
+                </button>
+              </div>
+              <div class="past-events__el-content">
+                <div class="past-events__el-content-header">
+                  <h3 class="past-events__el-title">Evolution Conference 2018</h3>
+                  <p class="past-events__el-views">View 203 images</p>
+                </div>
+                <div class="past-events__el-users">
+                  <div class="past-events__el-users-photos">
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                  </div>
+                  <div class="past-events__el-users-text">
+                    <p class="past-events__el-users-name">By Danielle Terpko</p>
+                    <time class="past-events__el-users-date">October 21, 2022</time>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <figure class="past-events__el">
+              <div class="past-events__el-video" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                <img src="img/past-events/8.jpg" alt="video" class="past-events__el-video-img"><img src="img/past-events/video1.jpg" alt="video" class="past-events__el-video-img past-events__el-video-img--video">
+                <button type="button" class="button button--blur-to-gradient button--play" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                  <span class="button__bg"></span>
+                  <span class="button__content">
+                    <img data-src="img/membership/icon-play.svg" alt="#" class="lazy">
+                  </span>
+                </button>
+              </div>
+              <div class="past-events__el-content">
+                <div class="past-events__el-content-header">
+                  <h3 class="past-events__el-title">Orlando Conference 2017</h3>
+                  <p class="past-events__el-views">View 203 images</p>
+                </div>
+                <div class="past-events__el-users">
+                  <div class="past-events__el-users-photos">
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                  </div>
+                  <div class="past-events__el-users-text">
+                    <p class="past-events__el-users-name">By Danielle Terpko</p>
+                    <time class="past-events__el-users-date">October 21, 2022</time>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <figure class="past-events__el">
+              <div class="past-events__el-video" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                <img src="img/past-events/9.jpg" alt="video" class="past-events__el-video-img"><img src="img/past-events/video1.jpg" alt="video" class="past-events__el-video-img past-events__el-video-img--video">
+                <button type="button" class="button button--blur-to-gradient button--play" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                  <span class="button__bg"></span>
+                  <span class="button__content">
+                    <img data-src="img/membership/icon-play.svg" alt="#" class="lazy">
+                  </span>
+                </button>
+              </div>
+              <div class="past-events__el-content">
+                <div class="past-events__el-content-header">
+                  <h3 class="past-events__el-title">Master Regional Conference..</h3>
+                  <p class="past-events__el-views">View 203 images</p>
+                </div>
+                <div class="past-events__el-users">
+                  <div class="past-events__el-users-photos">
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                    <div class="past-events__el-users-photo">
+                      <img src="img/past-events/user.jpg" alt="img" class="past-events__el-users-photo-img">
+                    </div>
+                  </div>
+                  <div class="past-events__el-users-text">
+                    <p class="past-events__el-users-name">By Danielle Terpko</p>
+                    <time class="past-events__el-users-date">October 21, 2022</time>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+        </div>
+        <div class="pagination">
+          <a href="#" class="pagination__btn">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.8332 6.99984H1.1665M1.1665 6.99984L6.99984 12.8332M1.1665 6.99984L6.99984 1.1665" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            <span class="pagination__btn-text">Previous</span>
+          </a>
+          <div class="pagination__pages">
+            <a href="#" class="pagination__pages-el">1</a>
+            <a href="#" class="pagination__pages-el">2</a>
+            <a href="#" class="pagination__pages-el active">3</a>
+            <a href="#" class="pagination__pages-el">...</a>
+            <a href="#" class="pagination__pages-el">8</a>
+            <a href="#" class="pagination__pages-el">9</a>
+          </div>
+          <a href="#" class="pagination__btn">
+            <span class="pagination__btn-text">Next</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.1665 6.99984H12.8332M12.8332 6.99984L6.99984 1.1665M12.8332 6.99984L6.99984 12.8332" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+  //= template/footer.html
+
+<div class="modal modal--video fade" id="modalVideo1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-body p-0 d-flex align-items-center">
+            <video src="img/membership/video.mp4" controls></video>
+          </div>
+      </div>
+  </div>
+</div>
+  <script src="libs/bootstrap-5.2.3/bootstrap.bundle.min.js"></script>
+  <script src="libs/swiper/swiper-bundle.min.js"></script>
+  <script src="libs/lazyload.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="libs/smooth-scrollbar/smooth-scrollbar.js"></script>
+  <script src="libs/smooth-scrollbar/plugins/overscroll.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  
+  <script src="scripts/app.js" defer></script>
+  <script>
+    const myLazyLoad = new LazyLoad();
+    myLazyLoad.update();
+  </script>
+  <!-- <script>
+    const mySelect = document.getElementById('my-select');
+    const select = new Choices(mySelect, {
+      renderSelectedChoices: 'always', // Don't show result in choices__inner
+      shouldSort: false, // Show choices items in dropdown always
+      searchEnabled: true, // Searchable
+      searchPlaceholderValue: 'Select Gallery', // Search placeholder = "Select Gallery"
+      removeItems: false,
+      
+      // Add a listener for the "click" event on the dropdown items
+      callbackOnMousedown: function(event) {
+        // Check if the target is a selected item
+        const selectedItem = event.target.closest('.choices__item--selectable.selected');
+        if (selectedItem) {
+          // Deselect the item
+          choices.removeActiveItemsByValue(selectedItem.getAttribute('data-value'));
+        }
+      }
+     });
+    // Add an event listener to the click event on the dropdown items
+    const dropdown = select.choiceList.element;
+    dropdown.addEventListener('click', event => {
+      // Check if the clicked element has the choices__item class
+      const choicesItem = event.target.closest('.choices__item');
+      console.log(choicesItem);
+      if (choicesItem) {
+        // Get the value of the clicked item
+        const value = choicesItem.getAttribute('data-value');
+        // Deselect the item
+        select.removeActiveItemsByValue(value);
+      }
+    });
+
+    const searchInput = select.containerOuter.element.querySelector('.choices__input.choices__input--cloned');
+    searchInput.placeholder = "Select Your Gallery";
+    console.log(searchInput);
+    const dropdownList = select.dropdown.element;
+    dropdownList.insertBefore(searchInput, dropdownList.firstChild);
+  </script> -->
+
+
+</body>
+
+</html>

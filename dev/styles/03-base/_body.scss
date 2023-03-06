@@ -26,7 +26,7 @@
     top: 0;
     width: 20.5px;
     height: 20.5px;
-    background: url(../img/check-blue.svg) center no-repeat;
+    background: url(../img/icons/check-blue.svg) center no-repeat;
     background-size: contain !important;
     display: flex;
     align-items: center;
@@ -125,7 +125,7 @@ body {
   @extend .text-gradient;
   
   @media(max-width: $sm) {
-    margin-bottom: 14px;
+    //margin-bottom: 14px;
   }
   @media(max-width: $xs) {
 
@@ -144,6 +144,25 @@ body {
     padding-top: 45px;
     padding-bottom: 45px;
   }
+  &--first {
+    padding-top: 126px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      padding-top: 100px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
 }
 .section-header {
   margin-bottom: 25px;
@@ -154,24 +173,19 @@ body {
 
 }
 .hero {
-  background: url(../img/heroBG.jpg) center no-repeat;
+
   background-size: cover;
-  height: calc((var(--vh, 1vh) * 100) - 180px);
-
-  min-height: 350px;
-
   display: flex;
   align-items: center;
   justify-content: center;
   color: $color-text2;
   text-align: center;
+  height: 520px;
   @media(max-width: $sm) {
 
   }
   @media(max-width: $xs) {
-    height: calc(100vh - 230px);
-    height: calc((var(--vh, 1vh) * 100) - 230px);
-
+    height: 620px;
   }
   .container {
     padding-top: 32px;
@@ -179,7 +193,9 @@ body {
 
     }
     @media(max-width: $xs) {
-  
+      padding-left: 12px;
+      padding-right: 12px;
+      
     }
   }
   .section-subtitle {
@@ -914,7 +930,7 @@ body {
       top: 0;
       width: 20.5px;
       height: 20.5px;
-      background: url(../img/check-blue.svg) center no-repeat;
+      background: url(../img/icons/check-blue.svg) center no-repeat;
       background-size: contain;
       @media(max-width: $md) {
 
@@ -1908,7 +1924,7 @@ body {
       top: 0;
       width: 20.5px;
       height: 20.5px;
-      background: url(../img/check-white.svg) center no-repeat;
+      background: url(../img/icons/check-white.svg) center no-repeat;
       opacity: 0.5;
       background-size: contain;
       @media(max-width: $md) {
@@ -1949,7 +1965,7 @@ body {
     
       }
       &::after {
-        background-image: url(../img/arrow-right-white.svg) !important;
+        background-image: url(../img/icons/arrow-right-white.svg) !important;
         @media(max-width: $md) {
 
         }

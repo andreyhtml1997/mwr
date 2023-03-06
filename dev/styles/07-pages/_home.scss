@@ -1,0 +1,12 @@
+.home-page {
+  .hero {
+    background: url(../img/heroBG.jpg) center no-repeat;
+    background-size: cover;
+    height: calc((var(--vh, 1vh) * 100) - 180px);
+    min-height: 350px;
+    @media(max-width: $xs){
+      height: calc(100vh - 230px);
+      height: calc((var(--vh, 1vh) * 100) - 230px);
+    }
+  }
+}

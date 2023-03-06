@@ -20,7 +20,7 @@
     &::after {
       content: '';
       position: relative;
-      background: url(../img/arrow-right-white.svg) center no-repeat;
+      background: url(../img/icons/arrow-right-white.svg) center no-repeat;
       width: 9px;
       height: 8px;
       margin-left: 6.5px;
@@ -29,7 +29,7 @@
     &:hover {
       background: white;
       &:after {
-        background-image: url(../img/arrow-right-blue.svg);
+        background-image: url(../img/icons/arrow-right-blue.svg);
       }
       .button__text {
         @extend .text-gradient;
@@ -44,7 +44,7 @@
     &::after {
       content: '';
       position: relative;
-      background: url(../img/arrow-right-blue.svg) center no-repeat;
+      background: url(../img/icons/arrow-right-blue.svg) center no-repeat;
       width: 9px;
       height: 8px;
       margin-left: 6.5px;
@@ -56,7 +56,7 @@
       background: $gradient1;
       @extend .text-gradient-but-white;
       &::after {
-        background-image: url(../img/arrow-right-white.svg);
+        background-image: url(../img/icons/arrow-right-white.svg);
       }
       .button__text {
         @extend .text-gradient-but-white;
@@ -103,7 +103,7 @@
     &::after {
       content: '';
       position: relative;
-      background: url(../img/arrow-right-white.svg) center no-repeat;
+      background: url(../img/icons/arrow-right-white.svg) center no-repeat;
       width: 9px;
       height: 8px;
       margin-left: 6.5px;
@@ -115,7 +115,7 @@
       @extend .text-gradient;
       border-image-source: $gradient1 !important;
       &::after {
-        background-image: url(../img/arrow-right-blue.svg);
+        background-image: url(../img/icons/arrow-right-blue.svg);
       }
       .button__text {
         @extend .text-gradient;
@@ -137,4 +137,11 @@
       left: 2px;
     }
   }
+}
+
+
+.gradient-border {
+  border-image-source: $gradient1 !important;
+  border: 1px solid;
+  border-image-slice: 1;
 }
