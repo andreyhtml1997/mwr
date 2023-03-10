@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-hidden">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join now</title>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="libs/bootstrap-5.2.3/bootstrap.min.css">
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet"href="libs/choices/choices.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  
+</head>
+
+<body class="overflow-hidden">
+  //= template/preloader.html
+  //= template/header.html
+<main class="home-page">
+  <section class="section hero">
+    <div class="container">
+      
+      <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+        <span class="button__bg"></span>
+        <span class="button__content">
+          <span class="button__text">
+          Join Now
+        </span>
+          <img data-src="img/icons/angle-right-white.svg" alt="#" class="lazy">
+        </span>
+      </button>
+      
+    </div>
+  </section>
+</main>
+  //= template/footer.html
+
+<div class="modal modal--sorry fade" id="modalVideo1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="btn-close" data-bs-dismiss="modal"></div>
+      <img src="img/plain.svg" alt="#">
+      <p class="section-text">Please contact your LIFESTYLE AMBASSADOR to get started.</p>
+    </div>
+  </div>
+</div>
+  <script src="libs/bootstrap-5.2.3/bootstrap.bundle.min.js"></script>
+  <script src="libs/swiper/swiper-bundle.min.js"></script>
+  <script src="libs/lazyload.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="libs/smooth-scrollbar/smooth-scrollbar.js"></script>
+  <script src="libs/smooth-scrollbar/plugins/overscroll.js"></script>
+  <script src="scripts/app.js" defer></script>
+  <script>
+    const myLazyLoad = new LazyLoad();
+    myLazyLoad.update();
+  </script>
+</body>
+
+</html>

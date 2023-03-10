@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-hidden">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Successfull</title>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="libs/bootstrap-5.2.3/bootstrap.min.css">
+  
+  <link rel="stylesheet"href="libs/choices/choices.min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+/>
+  <link rel="stylesheet" href="styles/main.css">
+  
+</head>
+
+<body class="overflow-hidden">
+  //= template/preloader.html
+  //= template/header-dark.html
+<main class="simple-page">
+  
+  <section class="section reg section--first">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-subtitle">Complete Registration</h3>
+        <h2 class="section-title">Elevation 2023 Conference</h2>
+      </div>
+      <ul class="reg__stages">
+        <li class="reg__stages-el finished">
+          <span class="reg__stages-el-radio"></span>
+          <span class="reg__stages-el-text">Login</span>
+        </li>
+        <li class="reg__stages-el finished">
+          <span class="reg__stages-el-radio"></span>
+          <span class="reg__stages-el-text">Attendee Information</span>
+        </li>
+        <li class="reg__stages-el active finished">
+          <span class="reg__stages-el-radio"></span>
+          <span class="reg__stages-el-text">Payment Options</span>
+        </li>
+      </ul>
+      <form class="reg__body form" action="#">
+        <div class="form__container mb-0">
+          <div class="form-header">
+        <h3 class="section-title">Payment Successful!</h3>
+        </div>
+        <fieldset class="form__fieldset successfull">
+          <p class="section-text">We look forward to seeing you in beautiful Florence, Italy at our upcoming 2023 Elevation Conference. An email has been sent to you along with your ticket details. Alternatively, you may access your purchased tickets in the <a href="my-tickets.html" class="section-text__link">My Tickets</a> section of this portal. </p>
+          <p class="successfull__text">
+            See you soon!<br>
+            Your MWR Life Corporate Team
+          </p>
+          <a href="#" class="button button--border-transparent-to-gradient">
+            <span class="button__bg"></span>
+            <span class="button__content">
+              <span class="button__text">
+                return to upcoming events
+              </span>
+            </span>
+          </a>
+        </fieldset>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+  //= template/footer.html
+
+<div class="modal modal--video fade" id="modalVideo1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-body p-0 d-flex align-items-center">
+            <video src="img/membership/video.mp4" controls></video>
+          </div>
+      </div>
+  </div>
+</div>
+  <script src="libs/bootstrap-5.2.3/bootstrap.bundle.min.js"></script>
+  <script src="libs/lazyload.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="libs/smooth-scrollbar/smooth-scrollbar.js"></script>
+  <script src="libs/smooth-scrollbar/plugins/overscroll.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  
+  <script src="scripts/app.js" defer></script>
+  <script>
+    const myLazyLoad = new LazyLoad();
+    myLazyLoad.update();
+  </script>
+
+
+</body>
+
+</html>

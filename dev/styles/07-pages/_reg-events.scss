@@ -131,11 +131,26 @@
     width: 100%;
     min-width: 635px;
     background-color: $color-text2;
-    &__container {
-      background-color: $color-text2;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
       box-shadow: $box-shadow-1;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    &__container {
+      //background-color: $color-text2;
+      //box-shadow: $box-shadow-1;
       margin-bottom: 27px;
-      padding-bottom: 8px;
       @media(max-width: $xl){
       
       }
@@ -146,14 +161,34 @@
         
       }
       @media(max-width: $sm){
-      
+        padding-bottom: 16px;
+        overflow: visible !important;
+        background-color: transparent;
+        box-shadow: none;
+
       }
       @media(max-width: $xs){
         
       }
+      @media(min-width: $xl){
+      
+      }
+      @media(min-width: $lg){
+      
+      }
+      @media(min-width: $md){
+        padding-bottom: 0;
+      }
+      @media(min-width: $sm){
+      
+      }
+      @media(min-width: $xs){
+      
+      }
       
       .scrollbar-track {
         background-color: transparent;
+
       }
       .scrollbar-thumb {
         background-color: #D5D9E0;
@@ -198,6 +233,7 @@
     .dropdown-menu {
       overflow: hidden;
       width: 60px !important;
+      height: 80px;
       //display: flex;
       &__inner {
         width: 100%;
@@ -334,10 +370,27 @@
       cursor: pointer;
       font-weight: 600;
       padding-right: 34px;
+      &:hover {
+        @media(min-width: $xl){
+        
+        }
+        @media(min-width: $lg){
+        
+        }
+        @media(min-width: $md){
+        
+        }
+        @media(min-width: $sm){
+          text-decoration: underline;
+        }
+        @media(min-width: $xs){
+        
+        }
+        
+      }
       .dropdown__arrow {
         position: absolute;
-        top: 0px;
-        bottom: 2px;
+        top: 7px;
         right: 16px;
         margin: auto;
         width: 8px;

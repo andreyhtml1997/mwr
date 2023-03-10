@@ -91,6 +91,10 @@ body {
   font-family: $font-main;
   font-weight: 400;
   line-height: 1.5;
+  overflow-x: hidden;
+  color: $color-text;
+  padding-right: 0 !important;
+  
 }
 .section-title {
   font-size: 32px;
@@ -2634,6 +2638,104 @@ body {
       
     }
   }
+  &--sorry {
+    padding: 15px !important;
+    color: $color-text2;
+    .modal-dialog {
+      height: 100%;
+      margin: auto;
+      width: 100%;
+      max-width: 100%;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+    .modal-content {
+      max-width: 463px;
+      padding: 40px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(21.5px);
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        padding: 30px;
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+        padding: 30px 20px;
+      }
+      
+      img {
+        margin-bottom: 9px;
+      }
+      .section-text {
+        font-size: 18px;
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+          font-size: 13px;
+        }
+        @media(max-width: $sm){
+          font-size: 16px;
+        }
+        @media(max-width: $xs){
+          
+        }
+        
+      }
+    }
+    .modal-body {
+      img {
+
+      }
+      .section-text {
+
+      }
+    }
+    .btn-close {
+      background: transparent;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      transform: rotate(45deg);
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+      &:before, &:after {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        content: '';
+        background-color: $color-text2;
+        border-radius: 10px;
+      }
+      &:before {
+        width: 2px;
+      }
+      &:after {
+        height: 2px;
+      }
+    }
+  }
 }
 
 
@@ -2761,3 +2863,6 @@ body {
 .simple-page {
   background: #F9FAFB;
 }
+
+
+

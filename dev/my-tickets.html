@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-hidden">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Tickets</title>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="libs/bootstrap-5.2.3/bootstrap.min.css">
+  
+  <link rel="stylesheet"href="libs/choices/choices.min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+/>
+  <link rel="stylesheet" href="styles/main.css">
+  
+</head>
+
+<body class="overflow-hidden">
+  //= template/preloader.html
+  //= template/header-dark.html
+<main class="pastEvents-page">
+  
+  <section class="section past-events section--first my-tickets">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-subtitle">Ticket Transaction History</h3>
+        <h2 class="section-title">My Tickets</h2>
+      </div>
+      <div class="past-events__header">
+
+        <div class="dropdown events-select dropdown-searchable me-0">
+          <button class="dropdown__header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Filter By Status
+            <span class="dropdown__arrow"></span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="events-select__search">
+              <input type="text" class="events-select__search-input" placeholder="Select Gallery">
+              <button class="search-clear" type="button"></button>
+            </div>
+            <label class="dropdown-item dropdown-item--special">
+              <input type="checkbox" class="events-select-checkbox" value="Show All" data-value="all">
+              <span class="checkbox__body">
+                <span class="checkbox__box"></span>
+                <span class="checkbox__text">Show All (Default)</span>
+              </span>
+            </label>
+            <div class="events-select__list">
+              <label class="dropdown-item approved">
+                <input type="checkbox" class="events-select-checkbox" value="Approved Registration, Active Event">
+                <span class="checkbox__body">
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Approved Registration, Active Event</span>
+                </span>
+              </label>
+              <label class="dropdown-item cancelled">
+                <input type="checkbox" class="events-select-checkbox" value="Cancelled Registration, Expired Event">
+                <span class="checkbox__body">
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Cancelled Registration, Expired Event</span>
+                </span>
+              </label>
+              <label class="dropdown-item declined">
+                <input type="checkbox" class="events-select-checkbox" value="Declined Registration, Cancelled Event">
+                <span class="checkbox__body">
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Declined Registration, Cancelled Event</span>
+                </span>
+              </label>
+              <label class="dropdown-item incomplete">
+                <input type="checkbox" class="events-select-checkbox" value="Incomplete Registration, Sold Out Event">
+                <span class="checkbox__body">
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Incomplete Registration, Sold Out Event</span>
+                </span>
+              </label>
+              <label class="dropdown-item not-approved">
+                <input type="checkbox" class="events-select-checkbox" value="Not Approved Registration">
+                <span class="checkbox__body">
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Not Approved Registration</span>
+                </span>
+              </label>
+              <label class="dropdown-item pending">
+                <input type="checkbox" class="events-select-checkbox" value="Pending Payment Registration, Upcoming Event">
+                <span class="checkbox__body">
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Pending Payment Registration, Upcoming Event</span>
+                </span>
+              </label>
+              <label class="dropdown-item wait">
+                <input type="checkbox" class="events-select-checkbox" value="Wait List Registration, Upcoming Event">
+                <span class="checkbox__body">
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Wait List Registration, Upcoming Event</span>
+                </span>
+              </label>
+              <label class="dropdown-item transfer">
+                <input type="checkbox" class="events-select-checkbox" value="Transfer Registration, Sold Out Event">
+                <span class="checkbox__body">
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Transfer Registration, Sold Out Event</span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="past-events__body">
+        <div class="calendar-table__container">
+          <table class="calendar-table">
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>Ticket</th>
+                <th>Dates & Times</th>
+                <th>Reg. Code</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="status status--approved">Approved Registration, Active Event</span>
+                </td>
+                <td>ELEVATION 2023 - General Admission</td>
+                <td>Apr 22, 2023 - Apr 24, 2023</td>
+                <td>20800-68-1-79b5</td>
+                <td>
+                  <div class="dropdown dropdown--ticket">
+                    <button class="dropdown__header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-menu__inner">
+                        <div class="dropdown-item transfer">Transfer Ticket</div>
+                        <div class="dropdown-item resend">Resend registration notification</div>
+                        <div class="dropdown-item payment">Make a payment</div>
+                        <div class="dropdown-item receipt">View Receipt</div>
+                        <div class="dropdown-item invoice">View Invoice</div>
+                        <div class="dropdown-item ticket">View Ticket</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="status status--cancelled">Cancelled Registration, Expired Event</span>
+                </td>
+                <td>ELEVATION 2023 - VIP Admission</td>
+                <td>Apr 22, 2023 - Apr 24, 2023</td>
+                <td>20802-68-1-82345</td>
+                <td>
+                  <div class="dropdown dropdown--ticket">
+                    <button class="dropdown__header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-menu__inner">
+                        <div class="dropdown-item transfer">Transfer Ticket</div>
+                        <div class="dropdown-item resend">Resend registration notification</div>
+                        <div class="dropdown-item payment">Make a payment</div>
+                        <div class="dropdown-item receipt">View Receipt</div>
+                        <div class="dropdown-item invoice">View Invoice</div>
+                        <div class="dropdown-item ticket">View Ticket</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="status status--declined">Declined Registration, Cancelled Event</span>
+                </td>
+                <td>YAHOO 2022 - General Admission</td>
+                <td>Oct 13, 2022 - Oct 14, 2022</td>
+                <td>20702-58-0-82321</td>
+                <td>
+                  <div class="dropdown dropdown--ticket">
+                    <button class="dropdown__header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-menu__inner">
+                        <div class="dropdown-item transfer">Transfer Ticket</div>
+                        <div class="dropdown-item resend">Resend registration notification</div>
+                        <div class="dropdown-item payment">Make a payment</div>
+                        <div class="dropdown-item receipt">View Receipt</div>
+                        <div class="dropdown-item invoice">View Invoice</div>
+                        <div class="dropdown-item ticket">View Ticket</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="status status--incomplete">Incomplete Registration, Sold Out Event</span>
+                </td>
+                <td>GOOGLE 2022 - General Admission</td>
+                <td>Sep 9, 2022 - Sep 10, 2022</td>
+                <td>20662-42-8-82312</td>
+                <td>
+                  <div class="dropdown dropdown--ticket">
+                    <button class="dropdown__header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-menu__inner">
+                        <div class="dropdown-item transfer">Transfer Ticket</div>
+                        <div class="dropdown-item resend">Resend registration notification</div>
+                        <div class="dropdown-item payment">Make a payment</div>
+                        <div class="dropdown-item receipt">View Receipt</div>
+                        <div class="dropdown-item invoice">View Invoice</div>
+                        <div class="dropdown-item ticket">View Ticket</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="status status--not-approved">Not Approved Registration</span>
+                </td>
+                <td>GOOGLE 2022 - VIP Admission</td>
+                <td>Sep 9, 2022 - Sep 10, 2022</td>
+                <td>20555-68-9-12923</td>
+                <td>
+                  <div class="dropdown dropdown--ticket">
+                    <button class="dropdown__header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-menu__inner">
+                        <div class="dropdown-item transfer">Transfer Ticket</div>
+                        <div class="dropdown-item resend">Resend registration notification</div>
+                        <div class="dropdown-item payment">Make a payment</div>
+                        <div class="dropdown-item receipt">View Receipt</div>
+                        <div class="dropdown-item invoice">View Invoice</div>
+                        <div class="dropdown-item ticket">View Ticket</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="status status--pending">Pending Payment Registration, Upcoming Event</span>
+                </td>
+                <td>FACEBOOK 2022 - General Admission</td>
+                <td>May 13, 2022 - May 14, 2022</td>
+                <td>20413-90-2-000b1</td>
+                <td>
+                  <div class="dropdown dropdown--ticket">
+                    <button class="dropdown__header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-menu__inner">
+                        <div class="dropdown-item transfer">Transfer Ticket</div>
+                        <div class="dropdown-item resend">Resend registration notification</div>
+                        <div class="dropdown-item payment">Make a payment</div>
+                        <div class="dropdown-item receipt">View Receipt</div>
+                        <div class="dropdown-item invoice">View Invoice</div>
+                        <div class="dropdown-item ticket">View Ticket</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="status status--wait">Wait List Registration, Upcoming Event</span>
+                </td>
+                <td>TRAVEL SOFT 2022 - VIP Admission</td>
+                <td>Mar 01, 2022 - Mar 02, 2022</td>
+                <td>20218-68-1-82345</td>
+                <td>
+                  <div class="dropdown dropdown--ticket">
+                    <button class="dropdown__header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-menu__inner">
+                        <div class="dropdown-item transfer">Transfer Ticket</div>
+                        <div class="dropdown-item resend">Resend registration notification</div>
+                        <div class="dropdown-item payment">Make a payment</div>
+                        <div class="dropdown-item receipt">View Receipt</div>
+                        <div class="dropdown-item invoice">View Invoice</div>
+                        <div class="dropdown-item ticket">View Ticket</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="status status--transfer">Transfer Registration, Sold Out Event</span>
+                </td>
+                <td>TRAVEL SOFT 2022 - General Admission</td>
+                <td>Mar 01, 2022 - Mar 02, 2022</td>
+                <td>20111-84-4-92b92</td>
+                <td>
+                  <div class="dropdown dropdown--ticket">
+                    <button class="dropdown__header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-menu__inner">
+                        <div class="dropdown-item transfer">Transfer Ticket</div>
+                        <div class="dropdown-item resend">Resend registration notification</div>
+                        <div class="dropdown-item payment">Make a payment</div>
+                        <div class="dropdown-item receipt">View Receipt</div>
+                        <div class="dropdown-item invoice">View Invoice</div>
+                        <div class="dropdown-item ticket">View Ticket</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+  //= template/footer.html
+
+  <script src="libs/bootstrap-5.2.3/bootstrap.bundle.min.js"></script>
+  <script src="libs/lazyload.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="libs/smooth-scrollbar/smooth-scrollbar.js"></script>
+  <script src="libs/smooth-scrollbar/plugins/overscroll.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  
+  <script src="scripts/app.js" defer></script>
+  <script>
+    const myLazyLoad = new LazyLoad();
+    myLazyLoad.update();
+  </script>
+
+
+</body>
+
+</html>

@@ -250,8 +250,7 @@ document.querySelectorAll('.modal').forEach(el => {
 if(document.querySelectorAll(".calendar-table .dropdown-menu__inner")) {
   document.querySelectorAll(".calendar-table .dropdown-menu__inner").forEach(el => {
     Scrollbar.init(el, {
-      thumbMinSize: 80,
-      alwaysShowTracks: true
+      alwaysShowTracks: true,
     });
   })
 }
@@ -328,8 +327,10 @@ const createDropdownSearchable = function(dropdown) {
 const calendarTable = document.querySelector('.calendar-table__container');
 if(calendarTable) {
 Scrollbar.init(calendarTable, {
-  thumbMinSize: 80,
-  alwaysShowTracks: true
+  alwaysShowTracks: true,
+  plugins: {
+    overscroll: false,
+  }
 });
 }
 const dropdownsSearchable = document.querySelectorAll('.dropdown-searchable');
@@ -339,3 +340,192 @@ if(dropdownsSearchable) {
   });
   
 }
+
+
+
+
+
+
+const password = document.querySelectorAll('.password__visibility');
+const passwordVisibilityToggle = function(toggler) {
+  toggler.addEventListener('click', function(e) {
+    e.currentTarget.classList.toggle('active');
+    const type = e.currentTarget.previousElementSibling.type;
+    if(type == 'password') {
+      type = 'text';
+    } else if(type == 'text') {
+      type = 'password';
+    }
+  });
+}
+if(password){
+  password.forEach(el => passwordVisibilityToggle(el))
+}
+
+let creditCard = document.querySelector('.creditCard');
+if(creditCard) {
+  let creditCardMaskOptions = {
+    mask: '0000 0000 0000 0000'
+  };
+  let creditCardMask = IMask(creditCard, creditCardMaskOptions);
+}
+let creditCardDate = document.querySelector('.creditCardDate');
+
+let creditCardCvc = document.querySelector('.creditCardCvc');
+
+let forms = document.querySelectorAll('form');
+
+let emails = document.querySelectorAll('input.email');
+
+function validateEmail(input) {
+  function removeErrorMessage() {
+    if(input.nextElementSibling && input.nextElementSibling.classList.contains('emailError')) {
+      input.nextElementSibling.remove();
+    }
+  }
+  removeErrorMessage();
+
+  const createErrorMessage = (message) => {
+    let messageBlock = document.createElement('p');
+    messageBlock.classList.add('emailError');
+    messageBlock.textContent = message;
+    return messageBlock;
+  }
+  let validRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  if(input.value) {
+    if (!input.value.match(validRegex)) {
+      input.after(createErrorMessage("Invalid email address"));
+      setTimeout(removeErrorMessage, 3000);
+      return false;
+    } else {
+      return true;
+    }
+  } else {
+    input.after(createErrorMessage("The field must not be empty"));
+    setTimeout(removeErrorMessage, 3000);
+    return false;
+  }
+}
+if(forms) {
+  forms.forEach(form => form.addEventListener('submit', function(e){
+    if(e.currentTarget.querySelectorAll('input.email')) {
+      e.currentTarget.querySelectorAll('input.email').forEach(email => {
+        validateEmail(email);
+        if(!validateEmail(email)) {
+          email.focus();
+        } 
+      });
+    }
+    e.stopPropagation();
+    e.preventDefault();
+  }));
+}
+if(creditCardDate) {
+  let creditCardDateMaskOptions = {
+    mask: 'mm / yy',
+    blocks: {
+      mm: {
+        mask: IMask.MaskedRange,
+        from: 1,
+        to: 12,
+        autofix: 'pad'
+      },
+      yy: {
+        mask: IMask.MaskedRange,
+        from: 23,
+        to: 99,
+        autofix: 'pad'
+      }
+    }
+  };
+  let creditCardDateMask = IMask(creditCardDate, creditCardDateMaskOptions);
+
+  creditCard.addEventListener('input', function(e){
+    const value = e.currentTarget.value;
+    const valueRealLength = value.length - (value.split(' ').length - 1);
+    if(valueRealLength == 16) {
+      creditCardDate.focus();
+    }
+  });
+  creditCardDate.addEventListener('keydown', function(e){
+    const key = e.key;
+    if (key == "Backspace" || key == "Delete") {
+      if(!e.currentTarget.value.length) {
+        creditCard.focus();
+      }
+    }
+  })
+}
+
+if(creditCardCvc) {
+  let creditCardCvcMaskOptions = {
+    mask: '000'
+  };
+  let creditCardCvcMask = IMask(creditCardCvc, creditCardCvcMaskOptions);
+
+  creditCardDate.addEventListener('input', function(e){
+    const value = e.currentTarget.value;
+    const valueRealLength = value.length - (value.split(' ').length - 1);
+    if(valueRealLength == 5) {
+      creditCardCvc.focus();
+    }
+  });
+  creditCardCvc.addEventListener('keydown', function(e){
+    const key = e.key;
+    if (key == "Backspace" || key == "Delete") {
+      if(!e.currentTarget.value.length) {
+        creditCardDate.focus();
+      }
+    }
+  })
+}
+
+function inputReq(el) {
+  const form = el.closest('.form');
+  const submitButton = form.querySelector('.button');
+  let allInputsError = [...form.querySelectorAll('.input__input.req')].filter(el => !el.value.length);
+  function setDisable() {
+    allInputsError = [...form.querySelectorAll('.input__input.req')].filter(el => !el.value.length);
+    if(!allInputsError.length) {
+      submitButton.removeAttribute('disabled');
+    } else {
+      submitButton.setAttribute('disabled', 'disabled');
+    }
+    
+  }
+  function setInputReq(el) {
+    el.addEventListener('input', function(e) {
+      const elem = e.currentTarget;
+      const allInputs = form.querySelectorAll('.input__input.req');
+      
+      
+      if(!elem.value) {
+        elem.closest('.input').classList.add('error');
+      } else {
+        elem.closest('.input').classList.remove('error');
+      }
+      allInputsError = [...allInputs].filter(el => !el.value.length);
+      setDisable();
+    })
+  }
+  setInputReq(el);
+
+  if(form.querySelector('#attendee2')) {
+    form.querySelector('#attendee2').addEventListener('change', function(e){
+      const container = form.querySelector('.border-container--additional');
+      container.classList.toggle('d-none');
+      container.querySelectorAll('.input__input').forEach(el => {
+        el.classList.toggle('req');
+        setInputReq(el);
+      });
+      setDisable();
+    })
+  }
+};
+
+if(document.querySelectorAll('.input__input.req')) {
+  document.querySelectorAll('.input__input.req').forEach(el => {
+    inputReq(el);
+  });
+}
+
